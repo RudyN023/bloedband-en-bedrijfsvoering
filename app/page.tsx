@@ -497,9 +497,10 @@ export default function Home() {
                   </p>
                   <p className="font-body text-white/40 text-xs lg:text-sm mt-1">{ep.guest}</p>
                 </div>
-                <div className="shrink-0 flex items-center gap-2 text-white/30 group-hover:text-[#1DB954] transition-colors">
-                  <SpotifyIcon />
-                  <span className="hidden sm:inline font-body text-xs font-semibold">Luister</span>
+                <div className="shrink-0 text-white/20 group-hover:text-bb-salmon transition-all group-hover:translate-x-1">
+                  <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
                 </div>
               </Link>
             ))}
