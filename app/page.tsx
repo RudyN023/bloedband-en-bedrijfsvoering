@@ -436,7 +436,7 @@ export default function Home() {
                   <p className="font-body text-white/80 text-sm leading-relaxed">
                     {episode.description}
                   </p>
-                  <div className="flex items-center gap-2 mt-5 text-bb-salmon group-hover:text-[#FF0000] text-xs font-semibold font-body transition-colors">
+                  <div className="flex items-center gap-2 mt-5 text-bb-salmon text-xs font-semibold font-body">
                     <YouTubeIcon />
                     Bekijk op YouTube
                   </div>
