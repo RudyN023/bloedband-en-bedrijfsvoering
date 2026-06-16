@@ -771,6 +771,14 @@ export default function Home() {
               />
             </Link>
           </div>
+          <div className="mt-10 text-center">
+            <Link
+              href="mailto:nick@quatrevingtquatre.nl"
+              className="font-body text-white/40 hover:text-white/80 text-sm transition-colors"
+            >
+              Partner worden?
+            </Link>
+          </div>
         </div>
       </section>
 
