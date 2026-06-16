@@ -109,7 +109,7 @@ const topEpisodes = [
 ];
 
 const stats = [
-  { value: "50+", label: "Afleveringen" },
+  { value: "45+", label: "Afleveringen" },
   { value: "30+", label: "Familiebedrijven" },
   { value: "6", label: "Thematische reeksen" },
 ];
@@ -381,7 +381,7 @@ export default function Home() {
             {/* Floating card */}
             <div className="absolute bottom-24 right-8 z-20 bg-bb-teal-900/90 backdrop-blur-sm border border-bb-teal-700/40 rounded-2xl p-6 max-w-[180px]">
               <div className="font-display text-5xl font-bold text-white leading-none">
-                50<span className="text-bb-salmon">+</span>
+                45<span className="text-bb-salmon">+</span>
               </div>
               <div className="font-body text-white/60 text-xs mt-2 leading-relaxed">
                 Afleveringen beschikbaar
