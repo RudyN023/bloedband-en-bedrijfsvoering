@@ -13,6 +13,7 @@ function SpotifyIcon() {
 }
 
 const navLinks = ["Afleveringen", "Over de podcast"];
+const contactHref = "mailto:nick@quatrevingtquatre.nl";
 
 export function NavBar() {
   const [open, setOpen] = useState(false);
@@ -42,6 +43,12 @@ export function NavBar() {
               {item}
             </Link>
           ))}
+          <Link
+            href={contactHref}
+            className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors"
+          >
+            Contact
+          </Link>
         </div>
 
         <div className="flex items-center gap-3">
@@ -82,11 +89,18 @@ export function NavBar() {
               key={item}
               href={`#${item.toLowerCase().replace(/ /g, "-")}`}
               onClick={() => setOpen(false)}
-              className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors py-3 border-b border-white/10 last:border-0"
+              className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors py-3 border-b border-white/10"
             >
               {item}
             </Link>
           ))}
+          <Link
+            href={contactHref}
+            onClick={() => setOpen(false)}
+            className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors py-3"
+          >
+            Contact
+          </Link>
         </div>
       )}
     </nav>
