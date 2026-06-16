@@ -16,9 +16,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Bloedband & Bedrijfsvoering — De podcast over familiebedrijven",
+  title: "Bloedband & Bedrijfsvoering — Dé podcast over familiebedrijven",
   description:
-    "De podcast over familiebedrijven in Nederland. Nick Waterman spreekt met ondernemers en opvolgers over opvolging, eigenaarschap en de spanning tussen bloedband en bedrijfsvoering. Luister op Spotify, Apple Podcasts en YouTube.",
+    "Dé podcast over familiebedrijven in Nederland. Nick Waterman spreekt met ondernemers en opvolgers over opvolging, eigenaarschap en de spanning tussen bloedband en bedrijfsvoering. Luister op Spotify, Apple Podcasts en YouTube.",
   keywords: [
     "familiebedrijf podcast",
     "familiebedrijven Nederland",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "FBNed podcast",
   ],
   openGraph: {
-    title: "Bloedband & Bedrijfsvoering — De podcast over familiebedrijven",
+    title: "Bloedband & Bedrijfsvoering — Dé podcast over familiebedrijven",
     description:
       "Nick Waterman spreekt met ondernemers en opvolgers uit Nederlandse familiebedrijven over opvolging, eigenaarschap en familiedynamiek.",
     type: "website",

@@ -197,7 +197,7 @@ const jsonLd = {
   "@type": "PodcastSeries",
   name: "Bloedband & Bedrijfsvoering",
   description:
-    "De podcast over familiebedrijven in Nederland. Nick Waterman spreekt met ondernemers en opvolgers over opvolging, eigenaarschap en de spanning tussen bloedband en bedrijfsvoering.",
+    "Dé podcast over familiebedrijven in Nederland. Nick Waterman spreekt met ondernemers en opvolgers over opvolging, eigenaarschap en de spanning tussen bloedband en bedrijfsvoering.",
   url: "https://bloedband-en-bedrijfsvoering.vercel.app",
   inLanguage: "nl",
   author: {
@@ -250,7 +250,7 @@ export default function Home() {
             <div className="flex items-center gap-3 mb-8">
               <div className="h-px w-12 bg-bb-salmon" />
               <span className="font-body text-bb-salmon text-xs font-semibold tracking-[0.2em] uppercase">
-                De podcast over familiebedrijven
+                Dé podcast over familiebedrijven
               </span>
             </div>
 
