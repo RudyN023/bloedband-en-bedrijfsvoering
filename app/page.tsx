@@ -271,7 +271,7 @@ export default function Home() {
 
             {/* Description */}
             <p className="font-body text-white/70 text-base lg:text-lg leading-relaxed mt-8 max-w-lg">
-              De Nederlandse podcast over familiebedrijven. Nick Waterman
+              Dé Nederlandse podcast over familiebedrijven. Nick Waterman
               spreekt met ondernemers en opvolgers over opvolging,
               eigenaarschap en de spanning tussen bloedband en
               bedrijfsvoering. Luister op Spotify, Apple Podcasts en YouTube.
