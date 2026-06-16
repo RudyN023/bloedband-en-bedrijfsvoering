@@ -330,8 +330,8 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-bb-plum-900/70 via-transparent to-bb-plum-900/30 z-10 pointer-events-none" />
 
             <Image
-              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=90&auto=format&fit=crop"
-              alt="Familiebedrijf vergadering"
+              src="/oos-en-nick.jpg"
+              alt="Oos Kesbeke en Nick Waterman"
               fill
               className="object-cover"
               priority
