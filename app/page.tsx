@@ -250,7 +250,7 @@ export default function Home() {
 
           {/* Nav links */}
           <div className="hidden md:flex items-center gap-8">
-            {["Afleveringen", "Over de podcast", "Gasten"].map((item) => (
+            {["Afleveringen", "Over de podcast"].map((item) => (
               <Link
                 key={item}
                 href={`#${item.toLowerCase().replace(/ /g, "-")}`}
