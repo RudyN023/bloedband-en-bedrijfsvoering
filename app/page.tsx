@@ -246,14 +246,6 @@ export default function Home() {
               height={44}
               className="h-11 w-11"
             />
-            <div className="hidden sm:block">
-              <span className="font-display text-white text-sm font-bold leading-tight tracking-wide block">
-                BLOEDBAND
-              </span>
-              <span className="font-display text-bb-salmon text-sm font-bold leading-tight tracking-wide block">
-                & BEDRIJFSVOERING
-              </span>
-            </div>
           </Link>
 
           {/* Nav links */}
@@ -796,14 +788,6 @@ export default function Home() {
                   height={40}
                   className="h-10 w-10"
                 />
-                <div>
-                  <div className="font-display text-white text-sm font-bold leading-tight tracking-wide">
-                    BLOEDBAND
-                  </div>
-                  <div className="font-display text-bb-salmon text-sm font-bold leading-tight tracking-wide">
-                    &amp; BEDRIJFSVOERING
-                  </div>
-                </div>
               </div>
               <p className="font-body text-white/50 text-sm leading-relaxed max-w-xs">
                 De podcast over het bijzondere leven en werk van
