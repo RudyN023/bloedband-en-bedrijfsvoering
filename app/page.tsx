@@ -299,19 +299,19 @@ export default function Home() {
 
             {/* Heading */}
             <h1 className="font-display font-bold leading-[1.05]">
-              <span className="block text-5xl lg:text-6xl xl:text-7xl text-white">
+              <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white">
                 Van keukentafel
               </span>
-              <span className="block text-5xl lg:text-6xl xl:text-7xl text-bb-salmon">
+              <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-bb-salmon">
                 naar
               </span>
-              <span className="block text-5xl lg:text-6xl xl:text-7xl text-white">
+              <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white">
                 boardroom
               </span>
             </h1>
 
             {/* Description */}
-            <p className="font-body text-white/70 text-lg leading-relaxed mt-8 max-w-lg">
+            <p className="font-body text-white/70 text-base lg:text-lg leading-relaxed mt-8 max-w-lg">
               De Nederlandse podcast over familiebedrijven. Nick Waterman
               spreekt met ondernemers en opvolgers over opvolging,
               eigenaarschap en de spanning tussen bloedband en
@@ -401,10 +401,10 @@ export default function Home() {
 
       {/* ── Stats bar ── */}
       <section className="bg-bb-salmon">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-3 divide-x divide-white/20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10 grid grid-cols-3 divide-x divide-white/20">
           {stats.map((stat) => (
-            <div key={stat.label} className="text-center px-8">
-              <div className="font-display text-4xl lg:text-5xl font-bold text-white">
+            <div key={stat.label} className="text-center px-2 sm:px-6 lg:px-8">
+              <div className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
                 {stat.value}
               </div>
               <div className="font-body text-white text-sm mt-1 tracking-wide">
@@ -526,19 +526,19 @@ export default function Home() {
                 key={ep.rank}
                 href={ep.href}
                 target="_blank"
-                className="group flex items-center gap-6 lg:gap-10 py-6 hover:bg-white/5 -mx-4 px-4 rounded-xl transition-colors"
+                className="group flex items-center gap-4 lg:gap-10 py-5 hover:bg-white/5 rounded-xl transition-colors"
               >
-                <span className="font-display text-3xl lg:text-4xl text-white/15 group-hover:text-bb-salmon transition-colors tabular-nums shrink-0 w-12 text-right">
+                <span className="font-display text-2xl lg:text-4xl text-white/15 group-hover:text-bb-salmon transition-colors tabular-nums shrink-0 w-8 lg:w-12 text-right">
                   {ep.rank}
                 </span>
                 <div className="flex-1 min-w-0">
                   <div className="font-body text-bb-salmon text-xs font-semibold tracking-wider uppercase mb-1">
                     {ep.company}
                   </div>
-                  <p className="font-display text-white text-lg lg:text-xl font-bold leading-snug group-hover:text-bb-salmon transition-colors">
+                  <p className="font-display text-white text-base lg:text-xl font-bold leading-snug group-hover:text-bb-salmon transition-colors">
                     &ldquo;{ep.title}&rdquo;
                   </p>
-                  <p className="font-body text-white/40 text-sm mt-1">{ep.guest}</p>
+                  <p className="font-body text-white/40 text-xs lg:text-sm mt-1">{ep.guest}</p>
                 </div>
                 <div className="shrink-0 flex items-center gap-2 text-white/30 group-hover:text-[#1DB954] transition-colors">
                   <SpotifyIcon />
@@ -556,7 +556,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image */}
             <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden aspect-[3/2] sm:aspect-[4/3] lg:aspect-[4/5] shadow-2xl">
                 <Image
                   src="/nick-waterman.png"
                   alt="Nick Waterman, presentator van Bloedband & Bedrijfsvoering"
