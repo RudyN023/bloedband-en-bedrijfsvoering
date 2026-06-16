@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { NewsletterForm } from "./components/NewsletterForm";
 import { NavBar } from "./components/NavBar";
+import { AnimateIn } from "./components/AnimateIn";
+import { StatCounter } from "./components/StatCounter";
 
 // ─── Data ───────────────────────────────────────────────────────────────────
 
@@ -360,13 +362,8 @@ export default function Home() {
       <section className="bg-bb-salmon relative z-10" style={{ clipPath: "polygon(0 0, 100% 0, 100% 85%, 0 100%)", paddingBottom: "4rem" }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-3">
           {stats.map((stat, i) => (
-            <div key={stat.label} className={`text-center px-2 sm:px-6 lg:px-8 ${i > 0 ? "border-l border-white/25" : ""}`}>
-              <div className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white drop-shadow-sm">
-                {stat.value}
-              </div>
-              <div className="font-body text-white/80 text-xs sm:text-sm mt-1.5 tracking-widest uppercase">
-                {stat.label}
-              </div>
+            <div key={stat.label} className={`px-2 sm:px-6 lg:px-8 ${i > 0 ? "border-l border-white/25" : ""}`}>
+              <StatCounter value={stat.value} label={stat.label} />
             </div>
           ))}
         </div>
@@ -376,6 +373,7 @@ export default function Home() {
       <section id="afleveringen" className="bg-bb-teal-900 py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Header */}
+          <AnimateIn>
           <div className="flex items-end justify-between mb-14">
             <div>
               <div className="flex items-center gap-3 mb-4">
@@ -399,15 +397,16 @@ export default function Home() {
               </span>
             </Link>
           </div>
+          </AnimateIn>
 
           {/* Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {episodes.map((episode) => (
+            {episodes.map((episode, i) => (
+              <AnimateIn key={episode.title} delay={i * 100}>
               <Link
-                key={episode.title}
                 href={episode.href}
                 target="_blank"
-                className="group bg-bb-teal-800 rounded-2xl overflow-hidden hover:bg-bb-teal-700 transition-colors"
+                className="group bg-bb-teal-800 rounded-2xl overflow-hidden hover:bg-bb-teal-700 transition-colors block h-full"
               >
                 {/* Image */}
                 <div className="relative aspect-video overflow-hidden">
@@ -442,6 +441,7 @@ export default function Home() {
                   </div>
                 </div>
               </Link>
+              </AnimateIn>
             ))}
           </div>
 
@@ -461,6 +461,7 @@ export default function Home() {
       {/* ── Top Episodes ── */}
       <section className="bg-bb-plum-900 py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <AnimateIn>
           <div className="flex items-end justify-between mb-14">
             <div>
               <h2 className="font-display text-white text-4xl lg:text-5xl font-bold">
@@ -476,11 +477,12 @@ export default function Home() {
               <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
             </Link>
           </div>
+          </AnimateIn>
 
           <div className="flex flex-col divide-y divide-white/10">
-            {topEpisodes.map((ep) => (
+            {topEpisodes.map((ep, i) => (
+              <AnimateIn key={ep.rank} delay={i * 80}>
               <Link
-                key={ep.rank}
                 href={ep.href}
                 target="_blank"
                 className="group flex items-center gap-4 lg:gap-10 py-5 hover:bg-white/5 rounded-xl transition-colors"
@@ -503,6 +505,7 @@ export default function Home() {
                   </svg>
                 </div>
               </Link>
+              </AnimateIn>
             ))}
           </div>
         </div>
@@ -611,9 +614,9 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {themes.map((theme) => (
+            {themes.map((theme, i) => (
+              <AnimateIn key={theme.title} delay={i * 80}>
               <div
-                key={theme.title}
                 className="bg-white rounded-2xl p-8 border-t-4 border-bb-salmon shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-default"
               >
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-bb-salmon/10 text-bb-salmon mb-6">
@@ -626,6 +629,7 @@ export default function Home() {
                   {theme.description}
                 </p>
               </div>
+              </AnimateIn>
             ))}
           </div>
         </div>
