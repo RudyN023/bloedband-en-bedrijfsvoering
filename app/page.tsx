@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { NewsletterForm } from "./components/NewsletterForm";
+import { NavBar } from "./components/NavBar";
 
 // ─── Data ───────────────────────────────────────────────────────────────────
 
@@ -235,43 +236,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* ── Nav ── */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-bb-plum-900/95 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 shrink-0">
-            <Image
-              src="/bb-icon.svg"
-              alt="BB icon"
-              width={44}
-              height={44}
-              className="h-11 w-11"
-            />
-          </Link>
-
-          {/* Nav links */}
-          <div className="hidden md:flex items-center gap-8">
-            {["Afleveringen", "Over de podcast"].map((item) => (
-              <Link
-                key={item}
-                href={`#${item.toLowerCase().replace(/ /g, "-")}`}
-                className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors"
-              >
-                {item}
-              </Link>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <Link
-            href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1?si=7cc4de525dd9482a"
-            target="_blank"
-            className="flex items-center gap-2 bg-bb-salmon hover:bg-bb-salmon-light text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors"
-          >
-            <SpotifyIcon />
-            <span className="hidden sm:inline font-body">Luister nu</span>
-          </Link>
-        </div>
-      </nav>
+      <NavBar />
 
       {/* ── Hero ── */}
       <section className="relative min-h-screen bg-bb-plum-900 flex items-center pt-20">
@@ -392,14 +357,14 @@ export default function Home() {
       </section>
 
       {/* ── Stats bar ── */}
-      <section className="bg-bb-salmon">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10 grid grid-cols-3 divide-x divide-white/20">
-          {stats.map((stat) => (
-            <div key={stat.label} className="text-center px-2 sm:px-6 lg:px-8">
-              <div className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+      <section className="bg-bb-salmon relative z-10" style={{ clipPath: "polygon(0 0, 100% 0, 100% 85%, 0 100%)", paddingBottom: "4rem" }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-3">
+          {stats.map((stat, i) => (
+            <div key={stat.label} className={`text-center px-2 sm:px-6 lg:px-8 ${i > 0 ? "border-l border-white/25" : ""}`}>
+              <div className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white drop-shadow-sm">
                 {stat.value}
               </div>
-              <div className="font-body text-white text-sm mt-1 tracking-wide">
+              <div className="font-body text-white/80 text-xs sm:text-sm mt-1.5 tracking-widest uppercase">
                 {stat.label}
               </div>
             </div>
@@ -445,7 +410,7 @@ export default function Home() {
                 className="group bg-bb-teal-800 rounded-2xl overflow-hidden hover:bg-bb-teal-700 transition-colors"
               >
                 {/* Image */}
-                <div className="relative h-52 overflow-hidden">
+                <div className="relative aspect-video overflow-hidden">
                   <div className="absolute inset-0 bg-bb-plum-900/40 z-10 group-hover:bg-bb-plum-900/10 transition-colors" />
                   <Image
                     src={episode.image}
@@ -648,9 +613,9 @@ export default function Home() {
             {themes.map((theme) => (
               <div
                 key={theme.title}
-                className="bg-white/60 hover:bg-white rounded-2xl p-8 border border-white/80 hover:shadow-lg transition-all group cursor-default"
+                className="bg-white rounded-2xl p-8 border-t-4 border-bb-salmon shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-default"
               >
-                <div className="text-bb-salmon mb-5">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-bb-salmon/10 text-bb-salmon mb-6">
                   <ThemeIcon name={theme.icon} />
                 </div>
                 <h3 className="font-display text-bb-plum-900 text-2xl font-bold mb-3 group-hover:text-bb-teal-800 transition-colors">
