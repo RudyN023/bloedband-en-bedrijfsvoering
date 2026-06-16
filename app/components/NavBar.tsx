@@ -37,7 +37,7 @@ export function NavBar() {
           {navLinks.map((item) => (
             <Link
               key={item}
-              href={`#${item.toLowerCase().replace(/ /g, "-")}`}
+              href={`/#${item.toLowerCase().replace(/ /g, "-")}`}
               className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors"
             >
               {item}
@@ -87,7 +87,7 @@ export function NavBar() {
           {navLinks.map((item) => (
             <Link
               key={item}
-              href={`#${item.toLowerCase().replace(/ /g, "-")}`}
+              href={`/#${item.toLowerCase().replace(/ /g, "-")}`}
               onClick={() => setOpen(false)}
               className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors py-3 border-b border-white/10"
             >
