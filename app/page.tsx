@@ -191,9 +191,49 @@ function ThemeIcon({ name }: { name: string }) {
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "PodcastSeries",
+  name: "Bloedband & Bedrijfsvoering",
+  description:
+    "De podcast over familiebedrijven in Nederland. Nick Waterman spreekt met ondernemers en opvolgers over opvolging, eigenaarschap en de spanning tussen bloedband en bedrijfsvoering.",
+  url: "https://bloedband-en-bedrijfsvoering.vercel.app",
+  inLanguage: "nl",
+  author: {
+    "@type": "Person",
+    name: "Nick Waterman",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Bloedband & Bedrijfsvoering",
+  },
+  potentialAction: [
+    {
+      "@type": "ListenAction",
+      target: "https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1",
+      name: "Luister op Spotify",
+    },
+    {
+      "@type": "ListenAction",
+      target:
+        "https://podcasts.apple.com/nl/podcast/bloedband-bedrijfsvoering/id1715013376",
+      name: "Luister op Apple Podcasts",
+    },
+    {
+      "@type": "WatchAction",
+      target: "https://www.youtube.com/@Bloedbandenbedrijfsvoering",
+      name: "Bekijk op YouTube",
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* ── Nav ── */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-bb-plum-900/95 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -272,9 +312,10 @@ export default function Home() {
 
             {/* Description */}
             <p className="font-body text-white/70 text-lg leading-relaxed mt-8 max-w-lg">
-              Presentator Nick Waterman spreekt met ondernemers en opvolgers uit
-              Nederlandse familiebedrijven, over opvolging, eigenaarschap en de
-              spanning tussen bloedband en bedrijfsvoering.
+              De Nederlandse podcast over familiebedrijven. Nick Waterman
+              spreekt met ondernemers en opvolgers over opvolging,
+              eigenaarschap en de spanning tussen bloedband en
+              bedrijfsvoering. Luister op Spotify, Apple Podcasts en YouTube.
             </p>
 
             {/* CTA buttons */}

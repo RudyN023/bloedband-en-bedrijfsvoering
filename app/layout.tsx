@@ -18,12 +18,28 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Bloedband & Bedrijfsvoering — De podcast over familiebedrijven",
   description:
-    "De podcast over het bijzondere leven en werk van familiebedrijven in Nederland. Presentator Nick Waterman spreekt met ondernemers en opvolgers over opvolging, eigenaarschap en familiedynamiek.",
+    "De podcast over familiebedrijven in Nederland. Nick Waterman spreekt met ondernemers en opvolgers over opvolging, eigenaarschap en de spanning tussen bloedband en bedrijfsvoering. Luister op Spotify, Apple Podcasts en YouTube.",
+  keywords: [
+    "familiebedrijf podcast",
+    "familiebedrijven Nederland",
+    "podcast ondernemers",
+    "opvolging familiebedrijf",
+    "eigenaarschap bedrijf",
+    "Nick Waterman podcast",
+    "bloedband bedrijfsvoering",
+    "Nederlandse ondernemers podcast",
+    "FBNed podcast",
+  ],
   openGraph: {
-    title: "Bloedband & Bedrijfsvoering",
+    title: "Bloedband & Bedrijfsvoering — De podcast over familiebedrijven",
     description:
-      "De podcast over het bijzondere leven en werk van familiebedrijven in Nederland.",
+      "Nick Waterman spreekt met ondernemers en opvolgers uit Nederlandse familiebedrijven over opvolging, eigenaarschap en familiedynamiek.",
     type: "website",
+    url: "https://bloedband-en-bedrijfsvoering.vercel.app",
+    siteName: "Bloedband & Bedrijfsvoering",
+  },
+  alternates: {
+    canonical: "https://bloedband-en-bedrijfsvoering.vercel.app",
   },
 };
 
