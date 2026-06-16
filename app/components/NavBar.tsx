@@ -13,7 +13,7 @@ function SpotifyIcon() {
 }
 
 const navLinks = ["Afleveringen", "Over de podcast"];
-const contactHref = "mailto:nick@quatrevingtquatre.nl";
+const contactHref = "/contact";
 
 export function NavBar() {
   const [open, setOpen] = useState(false);
