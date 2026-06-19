@@ -42,22 +42,33 @@ const themes = [
     icon: "succession",
   },
   {
-    title: "Next Gen",
+    title: "Eigenaarschap",
     description:
-      "De nieuwe generatie die het familiebedrijf een eigen gezicht geeft.",
-    icon: "nextgen",
+      "Wie bezit het bedrijf, wat betekent dat juridisch én emotioneel?",
+    icon: "ownership",
   },
   {
-    title: "De Jonge Ondernemer",
+    title: "Familiedynamiek",
     description:
-      "Jong en ambitieus: hoe bouw je verder op wat je familie heeft neergezet?",
-    icon: "youngentrepreneur",
+      "Hoe verhoud je het zakelijke en het persoonlijke als beide door elkaar lopen?",
+    icon: "family",
   },
   {
-    title: "Koninklijk",
+    title: "Professionalisering",
+    description: "Wanneer haal je extern talent in huis, en hoe doe je dat?",
+    icon: "professionalization",
+  },
+  {
+    title: "Generatieverandering",
     description:
-      "Familiebedrijven met het predicaat Koninklijk en hun bijzondere verhaal.",
-    icon: "royal",
+      "Vernieuwen zonder het werk van eerdere generaties af te wijzen.",
+    icon: "generation",
+  },
+  {
+    title: "Continuïteit",
+    description:
+      "Hoe bouw je een bedrijf dat ook de volgende generatie nog kan dragen?",
+    icon: "continuity",
   },
 ];
 
@@ -103,7 +114,7 @@ const topEpisodes = [
 const stats = [
   { value: "45+", label: "Afleveringen" },
   { value: "30+", label: "Familiebedrijven" },
-  { value: "4", label: "Thematische reeksen" },
+  { value: "6", label: "Thematische reeksen" },
 ];
 
 // ─── Icon Components ─────────────────────────────────────────────────────────
@@ -135,30 +146,54 @@ function YouTubeIcon() {
 function ThemeIcon({ name }: { name: string }) {
   const icons: Record<string, React.ReactNode> = {
     succession: (
+      // Estafettestokje / overdracht
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
-        <path d="M12 5v14M5 12l7-7 7 7" />
-        <circle cx="12" cy="19" r="2" />
-        <circle cx="12" cy="5" r="2" />
+        <circle cx="7" cy="6" r="2.5" />
+        <circle cx="17" cy="6" r="2.5" />
+        <path d="M7 8.5v3l3 2v4" />
+        <path d="M17 8.5v3l-3 2v4" />
+        <path d="M8 14h8" />
       </svg>
     ),
-    nextgen: (
+    ownership: (
+      // Sleutel
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+        <circle cx="8" cy="15" r="5" />
+        <circle cx="8" cy="15" r="2" />
+        <path d="M11.5 11.5L21 2" />
+        <path d="M18 2h3v3" />
+        <path d="M16 8l2 2" />
       </svg>
     ),
-    youngentrepreneur: (
+    family: (
+      // Hart met handen
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
-        <path d="M12 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14z" />
-        <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12" />
+        <path d="M19.5 12.572l-7.5 7.428-7.5-7.428A5 5 0 0 1 12 6.006a5 5 0 0 1 7.5 6.566z" />
+        <path d="M12 8v5" />
+        <path d="M9.5 11l2.5 2 2.5-2" />
       </svg>
     ),
-    royal: (
+    professionalization: (
+      // Persoon met tandwiel
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
-        <path d="M2 17l2-9 4 4 4-8 4 8 4-4 2 9H2z" />
-        <path d="M2 17h20v3H2z" />
-        <circle cx="4" cy="8" r="1" fill="currentColor" stroke="none" />
-        <circle cx="12" cy="4" r="1" fill="currentColor" stroke="none" />
-        <circle cx="20" cy="8" r="1" fill="currentColor" stroke="none" />
+        <circle cx="9" cy="7" r="3" />
+        <path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 1.5.23" />
+        <circle cx="18.5" cy="17.5" r="2" />
+        <path d="M18.5 14v1.5M18.5 19.5V21M15.3 15.8l1.1 1M20.1 18.2l1.1 1M15.3 19.2l1.1-1M20.1 16.8l1.1-1M15 17.5h1.5M20 17.5h1.5" />
+      </svg>
+    ),
+    generation: (
+      // Boom met ringen (groei)
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+        <path d="M12 22V8" />
+        <path d="M8 22h8" />
+        <path d="M7 12c-2-2-2-5 0-7 1.5 1 3.5 1.5 5 1 1.5.5 3.5 0 5-1 2 2 2 5 0 7-1.5-1-3.5-1-5 0-1.5-1-3.5-1-5 0z" />
+      </svg>
+    ),
+    continuity: (
+      // Oneindigheidsteken
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+        <path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4z" />
       </svg>
     ),
   };
@@ -588,7 +623,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {themes.map((theme, i) => (
               <AnimateIn key={theme.title} delay={i * 80}>
               <div
