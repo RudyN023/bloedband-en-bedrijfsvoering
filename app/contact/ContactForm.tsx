@@ -97,7 +97,7 @@ export function ContactForm() {
       </button>
 
       <p className="font-body text-bb-plum-700/60 text-xs">
-        Gratis en vrijblijvend · Nick reageert doorgaans binnen één werkdag
+        Gratis en vrijblijvend · We reageren doorgaans binnen één werkdag.
       </p>
     </form>
   );

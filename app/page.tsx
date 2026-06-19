@@ -42,33 +42,22 @@ const themes = [
     icon: "succession",
   },
   {
-    title: "Eigenaarschap",
+    title: "Next Gen",
     description:
-      "Wie bezit het bedrijf, wat betekent dat juridisch én emotioneel?",
-    icon: "ownership",
+      "De nieuwe generatie die het familiebedrijf een eigen gezicht geeft.",
+    icon: "nextgen",
   },
   {
-    title: "Familiedynamiek",
+    title: "De Jonge Ondernemer",
     description:
-      "Hoe verhoud je het zakelijke en het persoonlijke als beide door elkaar lopen?",
-    icon: "family",
+      "Jong en ambitieus: hoe bouw je verder op wat je familie heeft neergezet?",
+    icon: "youngentrepreneur",
   },
   {
-    title: "Professionalisering",
-    description: "Wanneer haal je extern talent in huis, en hoe doe je dat?",
-    icon: "professionalization",
-  },
-  {
-    title: "Generatieverandering",
+    title: "Koninklijk",
     description:
-      "Vernieuwen zonder het werk van eerdere generaties af te wijzen.",
-    icon: "generation",
-  },
-  {
-    title: "Continuïteit",
-    description:
-      "Hoe bouw je een bedrijf dat ook de volgende generatie nog kan dragen?",
-    icon: "continuity",
+      "Familiebedrijven met het predicaat Koninklijk en hun bijzondere verhaal.",
+    icon: "royal",
   },
 ];
 
@@ -114,7 +103,7 @@ const topEpisodes = [
 const stats = [
   { value: "45+", label: "Afleveringen" },
   { value: "30+", label: "Familiebedrijven" },
-  { value: "6", label: "Thematische reeksen" },
+  { value: "4", label: "Thematische reeksen" },
 ];
 
 // ─── Icon Components ─────────────────────────────────────────────────────────
@@ -147,45 +136,29 @@ function ThemeIcon({ name }: { name: string }) {
   const icons: Record<string, React.ReactNode> = {
     succession: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
-        <path d="M17 3h4v4M21 3l-9 9M7 21H3v-4M3 21l9-9" />
-        <path d="M14 7l3-4 3 4M17 3v8M7 17l-4 3 4 3M3 20h8" />
+        <path d="M12 5v14M5 12l7-7 7 7" />
+        <circle cx="12" cy="19" r="2" />
+        <circle cx="12" cy="5" r="2" />
       </svg>
     ),
-    ownership: (
+    nextgen: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
-        <rect x="3" y="11" width="18" height="11" rx="2" />
-        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-        <circle cx="12" cy="16" r="1.5" fill="currentColor" stroke="none" />
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
       </svg>
     ),
-    family: (
+    youngentrepreneur: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
-        <circle cx="9" cy="7" r="2.5" />
-        <circle cx="15" cy="7" r="2.5" />
-        <path d="M2 21v-1a7 7 0 0 1 7-7h6a7 7 0 0 1 7 7v1" />
-        <path d="M12 13v8" />
+        <path d="M12 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14z" />
+        <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12" />
       </svg>
     ),
-    professionalization: (
+    royal: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
-        <rect x="2" y="7" width="20" height="14" rx="2" />
-        <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-        <path d="M12 12v5M9.5 14.5h5" />
-      </svg>
-    ),
-    generation: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
-        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
-        <path d="M3 3v5h5" />
-        <path d="M12 7v5l4 2" />
-      </svg>
-    ),
-    continuity: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
-        <path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z" />
-        <path d="M8 12h8M12 8v8" />
-        <path d="M6.34 6.34l11.32 11.32M17.66 6.34 6.34 17.66" opacity="0" />
-        <path d="M7 7l10 10" opacity="0.3" />
+        <path d="M2 17l2-9 4 4 4-8 4 8 4-4 2 9H2z" />
+        <path d="M2 17h20v3H2z" />
+        <circle cx="4" cy="8" r="1" fill="currentColor" stroke="none" />
+        <circle cx="12" cy="4" r="1" fill="currentColor" stroke="none" />
+        <circle cx="20" cy="8" r="1" fill="currentColor" stroke="none" />
       </svg>
     ),
   };
@@ -252,7 +225,7 @@ export default function Home() {
             <div className="flex items-center gap-3 mb-8">
               <div className="h-px w-12 bg-bb-salmon" />
               <span className="font-body text-bb-salmon text-xs font-semibold tracking-[0.2em] uppercase">
-                Dé podcast over familiebedrijven
+                De nummer 1 podcast voor familiebedrijven
               </span>
             </div>
 
@@ -261,65 +234,45 @@ export default function Home() {
               <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white">
                 Van keukentafel
               </span>
-              <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-bb-salmon">
-                naar
-              </span>
-              <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white">
-                boardroom
+              <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl">
+                <span className="text-bb-salmon">naar </span>
+                <span className="text-white">boardroom</span>
               </span>
             </h1>
 
             {/* Description */}
             <p className="font-body text-white/70 text-base lg:text-lg leading-relaxed mt-8 max-w-lg">
-              Dé Nederlandse podcast over familiebedrijven. Nick Waterman
-              spreekt met ondernemers en opvolgers over opvolging,
-              eigenaarschap en de spanning tussen bloedband en
+              Nick Waterman spreekt met ondernemers en opvolgers over
+              opvolging, eigenaarschap en de spanning tussen bloedband en
               bedrijfsvoering. Luister op Spotify, Apple Podcasts en YouTube.
             </p>
 
-            {/* CTA buttons */}
-            <div className="flex flex-wrap gap-4 mt-10">
+            {/* CTA buttons — all platforms equal */}
+            <div className="flex flex-wrap gap-3 mt-10">
               <Link
                 href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1?si=7cc4de525dd9482a"
                 target="_blank"
-                className="flex items-center gap-2.5 bg-bb-salmon hover:bg-bb-salmon-light text-white font-semibold px-7 py-4 rounded-full transition-colors text-sm font-body"
+                className="flex items-center gap-2.5 bg-bb-salmon hover:bg-bb-salmon-light text-white font-semibold px-6 py-3.5 rounded-full transition-colors text-sm font-body"
               >
                 <SpotifyIcon />
-                Luister op Spotify
+                Spotify
               </Link>
               <Link
-                href="#afleveringen"
-                className="flex items-center gap-2.5 border border-white/30 hover:border-white text-white font-semibold px-7 py-4 rounded-full transition-colors text-sm font-body"
+                href="https://podcasts.apple.com/nl/podcast/bloedband-bedrijfsvoering/id1715013376"
+                target="_blank"
+                className="flex items-center gap-2.5 bg-bb-salmon hover:bg-bb-salmon-light text-white font-semibold px-6 py-3.5 rounded-full transition-colors text-sm font-body"
               >
-                Bekijk afleveringen
+                <AppleIcon />
+                Apple Podcasts
               </Link>
-            </div>
-
-            {/* Also on */}
-            <div className="flex items-center gap-5 mt-10 pt-8 border-t border-white/10">
-              <span className="font-body text-white/40 text-xs uppercase tracking-widest shrink-0">
-                Ook op
-              </span>
-              <div className="flex items-center gap-3">
-                <Link
-                  href="https://podcasts.apple.com/nl/podcast/bloedband-bedrijfsvoering/id1715013376"
-                  target="_blank"
-                  className="flex items-center gap-2 text-white/60 hover:text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full text-xs font-semibold transition-all font-body"
-                  aria-label="Apple Podcasts"
-                >
-                  <AppleIcon />
-                  Apple Podcasts
-                </Link>
-                <Link
-                  href="https://www.youtube.com/@Bloedbandenbedrijfsvoering"
-                  target="_blank"
-                  className="flex items-center gap-2 text-white/60 hover:text-white bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full text-xs font-semibold transition-all font-body"
-                  aria-label="YouTube"
-                >
-                  <YouTubeIcon />
-                  YouTube
-                </Link>
-              </div>
+              <Link
+                href="https://www.youtube.com/@Bloedbandenbedrijfsvoering"
+                target="_blank"
+                className="flex items-center gap-2.5 bg-bb-salmon hover:bg-bb-salmon-light text-white font-semibold px-6 py-3.5 rounded-full transition-colors text-sm font-body"
+              >
+                <YouTubeIcon />
+                YouTube
+              </Link>
             </div>
           </div>
 
@@ -372,7 +325,7 @@ export default function Home() {
               <div className="flex items-center gap-3 mb-4">
                 <div className="h-px w-12 bg-bb-salmon" />
                 <span className="font-body text-bb-salmon text-xs font-semibold tracking-[0.2em] uppercase">
-                  Recente afleveringen
+                  Nieuwste afleveringen
                 </span>
               </div>
               <h2 className="font-display text-white text-4xl lg:text-5xl font-bold">
@@ -396,13 +349,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {episodes.map((episode, i) => (
               <AnimateIn key={episode.title} delay={i * 100}>
-              <Link
-                href={episode.href}
-                target="_blank"
-                className="group bg-bb-teal-800 rounded-2xl overflow-hidden hover:bg-bb-teal-700 transition-colors block h-full"
+              <div
+                className="group bg-bb-teal-800 rounded-2xl overflow-hidden hover:bg-bb-teal-700 transition-colors h-full"
               >
                 {/* Image */}
-                <div className="relative aspect-video overflow-hidden">
+                <Link href={episode.href} target="_blank" className="block relative aspect-video overflow-hidden">
                   <div className="absolute inset-0 bg-bb-plum-900/40 z-10 group-hover:bg-bb-plum-900/10 transition-colors" />
                   <Image
                     src={episode.image}
@@ -415,7 +366,7 @@ export default function Home() {
                       <span className="text-white text-lg ml-1">▶</span>
                     </div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Content */}
                 <div className="p-6">
@@ -423,17 +374,41 @@ export default function Home() {
                     {episode.company}
                   </div>
                   <h3 className="font-display text-white text-xl font-bold leading-snug mb-3 group-hover:text-bb-salmon transition-colors">
-                    {episode.title}
+                    <Link href={episode.href} target="_blank" className="hover:underline">
+                      {episode.title}
+                    </Link>
                   </h3>
                   <p className="font-body text-white/80 text-sm leading-relaxed">
                     {episode.description}
                   </p>
-                  <div className="flex items-center gap-2 mt-5 text-bb-salmon text-xs font-semibold font-body">
-                    <YouTubeIcon />
-                    Bekijk op YouTube
+                  <div className="flex items-center gap-3 mt-5">
+                    <Link
+                      href={episode.href}
+                      target="_blank"
+                      className="flex items-center gap-1.5 text-bb-salmon hover:text-bb-salmon-light text-xs font-semibold font-body transition-colors"
+                    >
+                      <YouTubeIcon />
+                      YouTube
+                    </Link>
+                    <Link
+                      href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1"
+                      target="_blank"
+                      className="flex items-center gap-1.5 text-white/40 hover:text-bb-salmon text-xs font-semibold font-body transition-colors"
+                    >
+                      <SpotifyIcon />
+                      Spotify
+                    </Link>
+                    <Link
+                      href="https://podcasts.apple.com/nl/podcast/bloedband-bedrijfsvoering/id1715013376"
+                      target="_blank"
+                      className="flex items-center gap-1.5 text-white/40 hover:text-bb-salmon text-xs font-semibold font-body transition-colors"
+                    >
+                      <AppleIcon />
+                      Apple
+                    </Link>
                   </div>
                 </div>
-              </Link>
+              </div>
               </AnimateIn>
             ))}
           </div>
@@ -518,13 +493,25 @@ export default function Home() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-bb-plum-900/70 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="font-display text-white text-xl font-bold">
-                    Nick Waterman
+                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+                  <div>
+                    <div className="font-display text-white text-xl font-bold">
+                      Nick Waterman
+                    </div>
+                    <div className="font-body text-white/70 text-sm mt-0.5">
+                      Host van Bloedband &amp; Bedrijfsvoering
+                    </div>
                   </div>
-                  <div className="font-body text-white/70 text-sm mt-0.5">
-                    Host van Bloedband &amp; Bedrijfsvoering
-                  </div>
+                  <Link
+                    href="https://www.linkedin.com/in/nickwaterman/"
+                    target="_blank"
+                    className="flex items-center justify-center w-9 h-9 rounded-full bg-white/20 hover:bg-white/40 text-white transition-colors shrink-0"
+                    aria-label="Nick Waterman op LinkedIn"
+                  >
+                    <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                  </Link>
                 </div>
               </div>
               {/* Decorative circles */}
@@ -537,7 +524,7 @@ export default function Home() {
               <div className="flex items-center gap-3 mb-6">
                 <div className="h-px w-12 bg-bb-plum-800" />
                 <span className="font-body text-bb-plum-800 text-xs font-semibold tracking-[0.2em] uppercase">
-                  Over de podcast
+                  Over Bloedband &amp; Bedrijfsvoering
                 </span>
               </div>
 
@@ -579,7 +566,7 @@ export default function Home() {
                   Luister op Spotify
                 </Link>
                 <Link
-                  href="#afleveringen"
+                  href="/#afleveringen"
                   className="flex items-center gap-2 border border-bb-plum-700 text-bb-plum-900 hover:bg-bb-plum-900 hover:text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors font-body"
                 >
                   Bekijk afleveringen
@@ -606,7 +593,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 gap-5">
             {themes.map((theme, i) => (
               <AnimateIn key={theme.title} delay={i * 80}>
               <div
@@ -743,19 +730,18 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             {/* Brand */}
             <div>
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-4">
                 <Image
                   src="/bb-icon.svg"
                   alt="BB"
                   width={40}
                   height={40}
-                  className="h-10 w-10"
+                  className="h-10 w-10 shrink-0"
                 />
+                <p className="font-body text-white/50 text-sm leading-relaxed">
+                  De nummer 1 podcast voor familiebedrijven.
+                </p>
               </div>
-              <p className="font-body text-white/50 text-sm leading-relaxed max-w-xs">
-                De podcast over het bijzondere leven en werk van
-                familiebedrijven in Nederland.
-              </p>
             </div>
 
             {/* Navigation */}
