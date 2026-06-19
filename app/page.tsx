@@ -322,14 +322,8 @@ export default function Home() {
           <AnimateIn>
           <div className="flex items-end justify-between mb-14">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="h-px w-12 bg-bb-salmon" />
-                <span className="font-body text-bb-salmon text-xs font-semibold tracking-[0.2em] uppercase">
-                  Nieuwste afleveringen
-                </span>
-              </div>
               <h2 className="font-display text-white text-4xl lg:text-5xl font-bold">
-                Nieuwste gesprekken
+                Nieuwste afleveringen
               </h2>
             </div>
             <Link
