@@ -560,7 +560,8 @@ export default function Home() {
                   Luister op Spotify
                 </Link>
                 <Link
-                  href="/#afleveringen"
+                  href="https://www.youtube.com/@Bloedbandenbedrijfsvoering"
+                  target="_blank"
                   className="flex items-center gap-2 border border-bb-plum-700 text-bb-plum-900 hover:bg-bb-plum-900 hover:text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors font-body"
                 >
                   Bekijk afleveringen
