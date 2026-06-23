@@ -15,6 +15,8 @@ const episodes = [
     description:
       "Over de kunst van luisteren als je een familiebedrijf binnenstapt. Wat zie je als buitenstaander, en wanneer spreek je je uit?",
     href: "https://youtu.be/B8nKuQBcnog",
+    spotify: "https://open.spotify.com/episode/3LCQrctzdHvz35JJTApi2g?si=6b30b1a4d1e84efc",
+    apple: "https://podcasts.apple.com/nl/podcast/royal-nnz-ik-heb-de-eerste-dertig-dagen-gewoon-mijn/id1715013376?i=1000747308585",
   },
   {
     title: "De familie is ons heilig.",
@@ -23,6 +25,8 @@ const episodes = [
     description:
       "Bij Koninklijke Saan staat de familie centraal in alles. Maar wat betekent dat concreet als je harde zakelijke beslissingen moet nemen?",
     href: "https://youtu.be/LFJlQRdGPrU",
+    spotify: "https://open.spotify.com/episode/73A7DsiNFrWiWX8qdLswNn?si=c0706ffcd7da417e",
+    apple: "https://podcasts.apple.com/nl/podcast/koninklijke-saan-de-familie-is-ons-heilig-eeuwenoude/id1715013376?i=1000745395324",
   },
   {
     title: "Alles wat we doen moet geld opleveren voor de kapper.",
@@ -31,6 +35,8 @@ const episodes = [
     description:
       "Hoe bouw je een merk dat volledig om de vakman draait? Keune over focus, familiaire waarden en waarom de kapper altijd centraal staat.",
     href: "https://youtu.be/47HcY-HM-KQ",
+    spotify: "https://open.spotify.com/episode/7eFYqBP3r9aEQ8aVMIiu9N?si=3ddcff47c1f24c0f",
+    apple: "https://podcasts.apple.com/nl/podcast/keune-alles-wat-we-doen-moet-geld-opleveren-voor-de/id1715013376?i=1000740963275",
   },
 ];
 
@@ -420,7 +426,7 @@ export default function Home() {
                       YouTube
                     </Link>
                     <Link
-                      href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1"
+                      href={episode.spotify}
                       target="_blank"
                       className="flex items-center gap-1.5 text-white/40 hover:text-bb-salmon text-xs font-semibold font-body transition-colors"
                     >
@@ -428,7 +434,7 @@ export default function Home() {
                       Spotify
                     </Link>
                     <Link
-                      href="https://podcasts.apple.com/nl/podcast/bloedband-bedrijfsvoering/id1715013376"
+                      href={episode.apple}
                       target="_blank"
                       className="flex items-center gap-1.5 text-white/40 hover:text-bb-salmon text-xs font-semibold font-body transition-colors"
                     >
