@@ -120,7 +120,7 @@ const topEpisodes = [
 const stats = [
   { value: "45+", label: "Afleveringen" },
   { value: "30+", label: "Familiebedrijven" },
-  { value: "6", label: "Thematische reeksen" },
+  { value: "4", label: "Thematische reeksen" },
 ];
 
 // ─── Icon Components ─────────────────────────────────────────────────────────
