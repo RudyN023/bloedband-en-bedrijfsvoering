@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://bloedband-en-bedrijfsvoering.vercel.app",
+      url: "https://bloedbandenbedrijfsvoering.nl",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,

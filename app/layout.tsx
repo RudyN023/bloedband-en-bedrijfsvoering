@@ -35,11 +35,14 @@ export const metadata: Metadata = {
     description:
       "Nick Waterman spreekt met ondernemers en opvolgers uit Nederlandse familiebedrijven over opvolging, eigenaarschap en familiedynamiek.",
     type: "website",
-    url: "https://bloedband-en-bedrijfsvoering.vercel.app",
+    url: "https://bloedbandenbedrijfsvoering.nl",
     siteName: "Bloedband & Bedrijfsvoering",
   },
+  verification: {
+    google: "qbcrePL4fwkK3Qwm3fBvMcu2er-1pAMg52PO4z_TxQc",
+  },
   alternates: {
-    canonical: "https://bloedband-en-bedrijfsvoering.vercel.app",
+    canonical: "https://bloedbandenbedrijfsvoering.nl",
   },
 };
 
