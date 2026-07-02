@@ -7,7 +7,7 @@ type Status = "idle" | "sending" | "sent" | "error";
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
@@ -17,16 +17,22 @@ export function ContactForm() {
     const email = data.get("email") as string;
     const bericht = data.get("bericht") as string;
 
-    const subject = encodeURIComponent(`Bericht van ${naam}${organisatie ? ` — ${organisatie}` : ""}`);
-    const body = encodeURIComponent(
-      `Naam: ${naam}\nOrganisatie: ${organisatie || "—"}\nE-mail: ${email}\n\n${bericht}`
-    );
-
     setStatus("sending");
-    setTimeout(() => {
-      window.location.href = `mailto:nick@quatrevingtquatre.nl?subject=${subject}&body=${body}`;
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ naam, organisatie, email, bericht }),
+      });
+
+      if (!res.ok) throw new Error("Versturen mislukt");
+
       setStatus("sent");
-    }, 400);
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -88,13 +94,23 @@ export function ContactForm() {
         disabled={status === "sending" || status === "sent"}
         className="self-start flex items-center gap-2 bg-bb-plum-900 hover:bg-bb-plum-800 disabled:opacity-60 text-white font-semibold px-8 py-4 rounded-full transition-colors text-sm font-body"
       >
-        {status === "sending" ? "Openen…" : status === "sent" ? "Geopend ✓" : "Verstuur bericht"}
+        {status === "sending" ? "Versturen…" : status === "sent" ? "Verstuurd ✓" : "Verstuur bericht"}
         {status === "idle" && (
           <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         )}
       </button>
+
+      {status === "error" && (
+        <p className="font-body text-red-600 text-xs">
+          Er ging iets mis bij het versturen. Probeer het opnieuw of mail direct naar{" "}
+          <a href="mailto:nick@quatrevingtquatre.nl" className="underline">
+            nick@quatrevingtquatre.nl
+          </a>
+          .
+        </p>
+      )}
 
       <p className="font-body text-bb-plum-700/60 text-xs">
         Gratis en vrijblijvend · We reageren doorgaans binnen één werkdag.
