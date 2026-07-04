@@ -55,7 +55,7 @@ export function NavBar() {
           {/* CTA */}
           <Link
             href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1?si=7cc4de525dd9482a"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             className="flex items-center gap-2 bg-bb-salmon hover:bg-bb-salmon-light text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors"
           >
             <SpotifyIcon />

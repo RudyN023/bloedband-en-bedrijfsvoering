@@ -214,7 +214,7 @@ const jsonLd = {
   name: "Bloedband & Bedrijfsvoering",
   description:
     "Dé podcast over familiebedrijven in Nederland. Nick Waterman spreekt met ondernemers en opvolgers over opvolging, eigenaarschap en de spanning tussen bloedband en bedrijfsvoering.",
-  url: "https://bloedband-en-bedrijfsvoering.vercel.app",
+  url: "https://bloedbandenbedrijfsvoering.nl",
   inLanguage: "nl",
   author: {
     "@type": "Person",
@@ -292,7 +292,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-3 mt-10">
               <Link
                 href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1?si=7cc4de525dd9482a"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2.5 bg-bb-salmon hover:bg-bb-salmon-light text-white font-semibold px-6 py-3.5 rounded-full transition-colors text-sm font-body"
               >
                 <SpotifyIcon />
@@ -300,7 +300,7 @@ export default function Home() {
               </Link>
               <Link
                 href="https://podcasts.apple.com/nl/podcast/bloedband-bedrijfsvoering/id1715013376"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2.5 bg-bb-salmon hover:bg-bb-salmon-light text-white font-semibold px-6 py-3.5 rounded-full transition-colors text-sm font-body"
               >
                 <AppleIcon />
@@ -308,7 +308,7 @@ export default function Home() {
               </Link>
               <Link
                 href="https://www.youtube.com/@Bloedbandenbedrijfsvoering"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2.5 bg-bb-salmon hover:bg-bb-salmon-light text-white font-semibold px-6 py-3.5 rounded-full transition-colors text-sm font-body"
               >
                 <YouTubeIcon />
@@ -369,7 +369,7 @@ export default function Home() {
             </div>
             <Link
               href="https://www.youtube.com/@Bloedbandenbedrijfsvoering"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               className="hidden md:flex items-center gap-2 text-white/60 hover:text-white text-sm font-semibold transition-colors group font-body"
             >
               Alle afleveringen
@@ -388,7 +388,7 @@ export default function Home() {
                 className="group bg-bb-teal-800 rounded-2xl overflow-hidden hover:bg-bb-teal-700 transition-colors h-full"
               >
                 {/* Image */}
-                <Link href={episode.href} target="_blank" className="block relative aspect-video overflow-hidden">
+                <Link href={episode.href} target="_blank" rel="noopener noreferrer" className="block relative aspect-video overflow-hidden">
                   <div className="absolute inset-0 bg-bb-plum-900/40 z-10 group-hover:bg-bb-plum-900/10 transition-colors" />
                   <Image
                     src={episode.image}
@@ -409,7 +409,7 @@ export default function Home() {
                     {episode.company}
                   </div>
                   <h3 className="font-display text-white text-xl font-bold leading-snug mb-3 group-hover:text-bb-salmon transition-colors">
-                    <Link href={episode.href} target="_blank" className="hover:underline">
+                    <Link href={episode.href} target="_blank" rel="noopener noreferrer" className="hover:underline">
                       {episode.title}
                     </Link>
                   </h3>
@@ -419,7 +419,7 @@ export default function Home() {
                   <div className="flex items-center gap-3 mt-5">
                     <Link
                       href={episode.href}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       className="flex items-center gap-1.5 text-bb-salmon hover:text-bb-salmon-light text-xs font-semibold font-body transition-colors"
                     >
                       <YouTubeIcon />
@@ -427,7 +427,7 @@ export default function Home() {
                     </Link>
                     <Link
                       href={episode.spotify}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       className="flex items-center gap-1.5 text-white/40 hover:text-bb-salmon text-xs font-semibold font-body transition-colors"
                     >
                       <SpotifyIcon />
@@ -435,7 +435,7 @@ export default function Home() {
                     </Link>
                     <Link
                       href={episode.apple}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       className="flex items-center gap-1.5 text-white/40 hover:text-bb-salmon text-xs font-semibold font-body transition-colors"
                     >
                       <AppleIcon />
@@ -452,7 +452,7 @@ export default function Home() {
           <div className="mt-10 text-center md:hidden">
             <Link
               href="https://www.youtube.com/@Bloedbandenbedrijfsvoering"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-white/30 text-white px-6 py-3 rounded-full text-sm font-semibold hover:border-white transition-colors font-body"
             >
               Alle afleveringen →
@@ -473,7 +473,7 @@ export default function Home() {
             </div>
             <Link
               href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1?si=7cc4de525dd9482a"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               className="hidden md:flex items-center gap-2 text-white/60 hover:text-white text-sm font-semibold transition-colors group font-body"
             >
               Alle afleveringen
@@ -487,7 +487,7 @@ export default function Home() {
               <AnimateIn key={ep.rank} delay={i * 80}>
               <Link
                 href={ep.href}
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
                 className="group flex items-center gap-4 lg:gap-10 py-5 hover:bg-white/5 rounded-xl transition-colors"
               >
                 <span className="font-display text-2xl lg:text-4xl text-white/15 group-hover:text-bb-salmon transition-colors tabular-nums shrink-0 w-8 lg:w-12 text-right">
@@ -539,7 +539,7 @@ export default function Home() {
                   </div>
                   <Link
                     href="https://www.linkedin.com/in/nickwaterman/"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     className="flex items-center justify-center w-9 h-9 rounded-full bg-white/20 hover:bg-white/40 text-white transition-colors shrink-0"
                     aria-label="Nick Waterman op LinkedIn"
                   >
@@ -594,7 +594,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1?si=7cc4de525dd9482a"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-bb-plum-900 hover:bg-bb-plum-800 text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors font-body"
                 >
                   <SpotifyIcon />
@@ -602,7 +602,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="https://www.youtube.com/@Bloedbandenbedrijfsvoering"
-                  target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-2 border border-bb-plum-700 text-bb-plum-900 hover:bg-bb-plum-900 hover:text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors font-body"
                 >
                   Bekijk afleveringen
@@ -672,7 +672,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1?si=7cc4de525dd9482a"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 bg-[#1DB954] hover:bg-[#1ed760] text-white font-semibold px-8 py-4 rounded-full transition-colors text-sm font-body"
             >
               <SpotifyIcon />
@@ -680,7 +680,7 @@ export default function Home() {
             </Link>
             <Link
               href="https://podcasts.apple.com/nl/podcast/bloedband-bedrijfsvoering/id1715013376"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 bg-[#9933CC] hover:bg-[#aa44dd] text-white font-semibold px-8 py-4 rounded-full transition-colors text-sm font-body"
             >
               <AppleIcon />
@@ -688,7 +688,7 @@ export default function Home() {
             </Link>
             <Link
               href="https://www.youtube.com/@Bloedbandenbedrijfsvoering"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 bg-[#FF0000] hover:bg-[#cc0000] text-white font-semibold px-8 py-4 rounded-full transition-colors text-sm font-body"
             >
               <YouTubeIcon />
@@ -724,7 +724,7 @@ export default function Home() {
             Deze podcast wordt mede mogelijk gemaakt door
           </p>
           <div className="flex flex-wrap items-center justify-center gap-14 lg:gap-20">
-            <Link href="https://www.quatrevingtquatre.nl/" target="_blank" className="relative h-10 w-40 opacity-70 hover:opacity-100 transition-opacity">
+            <Link href="https://www.quatrevingtquatre.nl/" target="_blank" rel="noopener noreferrer" className="relative h-10 w-40 opacity-70 hover:opacity-100 transition-opacity">
               <Image
                 src="/logo-qvq.webp"
                 alt="Quatre Vingt Quatre"
@@ -732,7 +732,7 @@ export default function Home() {
                 className="object-contain brightness-0 invert"
               />
             </Link>
-            <Link href="https://www.studiopodcast.nl/" target="_blank" className="relative h-10 w-52 opacity-70 hover:opacity-100 transition-opacity">
+            <Link href="https://www.studiopodcast.nl/" target="_blank" rel="noopener noreferrer" className="relative h-10 w-52 opacity-70 hover:opacity-100 transition-opacity">
               <Image
                 src="/logo-studiopodcast.png"
                 alt="Studio Podcast"
@@ -740,7 +740,7 @@ export default function Home() {
                 className="object-contain brightness-0 invert"
               />
             </Link>
-            <Link href="https://fbned.nl/nl" target="_blank" className="relative h-14 w-36 opacity-70 hover:opacity-100 transition-opacity">
+            <Link href="https://fbned.nl/nl" target="_blank" rel="noopener noreferrer" className="relative h-14 w-36 opacity-70 hover:opacity-100 transition-opacity">
               <Image
                 src="/logo-fbned.png"
                 alt="FBNed — FamilieBedrijven Nederland"
@@ -789,8 +789,7 @@ export default function Home() {
                 {[
                   { label: "Afleveringen", href: "#afleveringen" },
                   { label: "Over de podcast", href: "#over-de-podcast" },
-                  { label: "Gasten & bedrijven", href: "#gasten" },
-                  { label: "Contact", href: "mailto:nick@quatrevingtquatre.nl" },
+                  { label: "Contact", href: "/contact" },
                 ].map((item) => (
                   <li key={item.label}>
                     <Link
@@ -818,7 +817,7 @@ export default function Home() {
                   <li key={p.label}>
                     <Link
                       href={p.href}
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       className="font-body text-white/50 hover:text-white text-sm transition-colors"
                     >
                       {p.label}
@@ -832,20 +831,9 @@ export default function Home() {
           {/* Bottom */}
           <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="font-body text-white/30 text-xs">
-              © 2025 Bloedband &amp; Bedrijfsvoering. Alle rechten
+              © {new Date().getFullYear()} Bloedband &amp; Bedrijfsvoering. Alle rechten
               voorbehouden.
             </p>
-            <div className="flex items-center gap-6">
-              {["Privacybeleid", "Cookiebeleid"].map((item) => (
-                <Link
-                  key={item}
-                  href="#"
-                  className="font-body text-white/30 hover:text-white/60 text-xs transition-colors"
-                >
-                  {item}
-                </Link>
-              ))}
-            </div>
           </div>
         </div>
       </footer>

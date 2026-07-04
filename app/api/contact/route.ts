@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
   const { naam, organisatie, email, bericht } = await request.json();
 
@@ -13,6 +11,7 @@ export async function POST(request: Request) {
     );
   }
 
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const { error } = await resend.emails.send({
     from: "Bloedband & Bedrijfsvoering <contact@bloedbandenbedrijfsvoering.nl>",
     to: "nick@quatrevingtquatre.nl",

@@ -37,7 +37,9 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://bloedbandenbedrijfsvoering.nl",
     siteName: "Bloedband & Bedrijfsvoering",
+    images: ["/oos-en-nick.jpg"],
   },
+  metadataBase: new URL("https://bloedbandenbedrijfsvoering.nl"),
   verification: {
     google: "qbcrePL4fwkK3Qwm3fBvMcu2er-1pAMg52PO4z_TxQc",
   },

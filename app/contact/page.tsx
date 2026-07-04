@@ -74,7 +74,7 @@ export default function ContactPage() {
                       </span>
                       <Link
                         href="https://www.linkedin.com/in/nickwaterman/"
-                        target="_blank"
+                        target="_blank" rel="noopener noreferrer"
                         className="text-bb-plum-700/50 hover:text-bb-salmon transition-colors"
                         aria-label="Nick Waterman op LinkedIn"
                       >
@@ -129,7 +129,7 @@ export default function ContactPage() {
                   {/* Spotify */}
                   <Link
                     href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1?si=7cc4de525dd9482a"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     className="group flex items-center gap-4 bg-white rounded-2xl p-5 hover:shadow-md transition-all border border-bb-purple-100 hover:border-bb-salmon/30"
                   >
                     <div className="w-11 h-11 rounded-xl bg-bb-salmon/10 flex items-center justify-center text-bb-salmon shrink-0 group-hover:bg-bb-salmon group-hover:text-white transition-colors">
@@ -153,7 +153,7 @@ export default function ContactPage() {
                   {/* Apple Podcasts */}
                   <Link
                     href="https://podcasts.apple.com/nl/podcast/bloedband-bedrijfsvoering/id1715013376"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     className="group flex items-center gap-4 bg-white rounded-2xl p-5 hover:shadow-md transition-all border border-bb-purple-100 hover:border-bb-salmon/30"
                   >
                     <div className="w-11 h-11 rounded-xl bg-bb-salmon/10 flex items-center justify-center text-bb-salmon shrink-0 group-hover:bg-bb-salmon group-hover:text-white transition-colors">
@@ -177,7 +177,7 @@ export default function ContactPage() {
                   {/* YouTube */}
                   <Link
                     href="https://www.youtube.com/@Bloedbandenbedrijfsvoering"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     className="group flex items-center gap-4 bg-white rounded-2xl p-5 hover:shadow-md transition-all border border-bb-purple-100 hover:border-bb-salmon/30"
                   >
                     <div className="w-11 h-11 rounded-xl bg-bb-salmon/10 flex items-center justify-center text-bb-salmon shrink-0 group-hover:bg-bb-salmon group-hover:text-white transition-colors">
