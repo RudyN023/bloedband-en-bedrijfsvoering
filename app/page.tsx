@@ -21,7 +21,7 @@ const episodes = [
   {
     title: "De familie is ons heilig.",
     company: "Koninklijke Saan",
-    image: "https://img.youtube.com/vi/LFJlQRdGPrU/maxresdefault.jpg",
+    image: "https://img.youtube.com/vi/LFJlQRdGPrU/maxresdefault.jpg?v=2",
     description:
       "Bij Koninklijke Saan staat de familie centraal in alles. Maar wat betekent dat concreet als je harde zakelijke beslissingen moet nemen?",
     href: "https://youtu.be/LFJlQRdGPrU",
@@ -31,7 +31,7 @@ const episodes = [
   {
     title: "Alles wat we doen moet geld opleveren voor de kapper.",
     company: "Keune Haircosmetics",
-    image: "https://img.youtube.com/vi/47HcY-HM-KQ/maxresdefault.jpg",
+    image: "https://img.youtube.com/vi/47HcY-HM-KQ/maxresdefault.jpg?v=2",
     description:
       "Hoe bouw je een merk dat volledig om de vakman draait? Keune over focus, familiaire waarden en waarom de kapper altijd centraal staat.",
     href: "https://youtu.be/47HcY-HM-KQ",
