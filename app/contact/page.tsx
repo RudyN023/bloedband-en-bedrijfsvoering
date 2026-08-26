@@ -26,12 +26,6 @@ export default function ContactPage() {
           <div className="absolute bottom-0 left-1/3 w-60 h-60 rounded-full bg-bb-teal-700 opacity-10 pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-px w-12 bg-bb-salmon" />
-              <span className="font-body text-bb-salmon text-xs font-semibold tracking-[0.2em] uppercase">
-                Neem contact op
-              </span>
-            </div>
             <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight max-w-2xl">
               Laten we kennismaken
             </h1>

@@ -263,12 +263,9 @@ export default function Home() {
           {/* Text side */}
           <div className="flex flex-col justify-center lg:pr-16">
             {/* Label */}
-            <div className="flex items-center gap-3 mb-8">
-              <div className="h-px w-12 bg-bb-salmon" />
-              <span className="font-body text-bb-salmon text-xs font-semibold tracking-[0.2em] uppercase">
-                De nummer 1 podcast voor familiebedrijven
-              </span>
-            </div>
+            <p className="font-body text-bb-salmon text-sm font-semibold mb-6">
+              De nummer 1 podcast voor familiebedrijven
+            </p>
 
             {/* Heading */}
             <h1 className="font-display font-bold leading-[1.05]">
@@ -556,13 +553,6 @@ export default function Home() {
 
             {/* Text */}
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="h-px w-12 bg-bb-plum-800" />
-                <span className="font-body text-bb-plum-800 text-xs font-semibold tracking-[0.2em] uppercase">
-                  Over Bloedband &amp; Bedrijfsvoering
-                </span>
-              </div>
-
               <blockquote className="font-display text-bb-plum-900 text-2xl lg:text-3xl font-semibold italic leading-snug mb-8 border-l-4 border-bb-salmon pl-6">
                 &ldquo;Een besluit over een directiefunctie raakt niet alleen
                 collega&rsquo;s, maar ook ouders, kinderen, broers en
@@ -617,13 +607,6 @@ export default function Home() {
       <section className="bg-bb-sage-100 py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-14">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-px w-12 bg-bb-plum-800" />
-              <span className="font-body text-bb-plum-900 text-xs font-semibold tracking-[0.2em] uppercase">
-                Onderwerpen
-              </span>
-              <div className="h-px w-12 bg-bb-plum-800" />
-            </div>
             <h2 className="font-display text-bb-plum-900 text-4xl lg:text-5xl font-bold">
               Waar gaat het over?
             </h2>
@@ -654,13 +637,6 @@ export default function Home() {
       {/* ── Platforms ── */}
       <section className="bg-bb-plum-900 py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-px w-12 bg-bb-salmon" />
-            <span className="font-body text-bb-salmon text-xs font-semibold tracking-[0.2em] uppercase">
-              Gratis beschikbaar
-            </span>
-            <div className="h-px w-12 bg-bb-salmon" />
-          </div>
           <h2 className="font-display text-white text-4xl lg:text-5xl font-bold mb-4">
             Luister waar jij wilt
           </h2>
