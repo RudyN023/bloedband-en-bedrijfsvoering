@@ -680,9 +680,12 @@ export default function Home() {
             De Donderdag Drie
           </h2>
           <p className="font-body text-white mb-10 text-lg leading-relaxed">
-            Elke donderdag één dilemma, één inzicht en één vraag over
-            ondernemen in een familiebedrijf. Gratis, rechtstreeks van Nick
-            Waterman.
+            Eén dilemma, één inzicht en één vraag die je helpen scherper te
+            kijken naar ondernemen in een familiebedrijf.
+            <br />
+            <br />
+            Elke donderdag ontvang je een exclusieve mail met drie nieuwe
+            gedachten voor de week.
           </p>
 
           <Link

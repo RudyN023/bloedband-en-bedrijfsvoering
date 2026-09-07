@@ -13,6 +13,7 @@ function SpotifyIcon() {
 }
 
 const navLinks = ["Afleveringen", "Over de podcast"];
+const newsletterHref = "/nieuwsbrief";
 const contactHref = "/contact";
 
 export function NavBar() {
@@ -43,6 +44,12 @@ export function NavBar() {
               {item}
             </Link>
           ))}
+          <Link
+            href={newsletterHref}
+            className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors"
+          >
+            Nieuwsbrief
+          </Link>
           <Link
             href={contactHref}
             className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors"
@@ -94,6 +101,13 @@ export function NavBar() {
               {item}
             </Link>
           ))}
+          <Link
+            href={newsletterHref}
+            onClick={() => setOpen(false)}
+            className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors py-3 border-b border-white/10"
+          >
+            Nieuwsbrief
+          </Link>
           <Link
             href={contactHref}
             onClick={() => setOpen(false)}
