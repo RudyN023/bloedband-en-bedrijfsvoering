@@ -56,7 +56,7 @@ export default function NieuwsbriefPage() {
           {/* Form */}
           <div className="mt-10">
             <NewsletterForm />
-            <p className="font-body text-bb-plum-700/70 text-xs text-center mt-4">
+            <p className="font-body text-bb-plum-700 text-sm text-center mt-4">
               Gratis. Geen spam. Uitschrijven kan altijd.
             </p>
           </div>
