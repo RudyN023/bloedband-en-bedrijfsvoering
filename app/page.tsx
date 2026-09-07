@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { NewsletterForm } from "./components/NewsletterForm";
 import { NavBar } from "./components/NavBar";
 import { AnimateIn } from "./components/AnimateIn";
 import { StatCounter } from "./components/StatCounter";
@@ -678,18 +677,20 @@ export default function Home() {
       <section className="bg-bb-salmon py-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="font-display text-white text-4xl lg:text-5xl font-bold mb-4">
-            Blijf op de hoogte
+            De Donderdag Drie
           </h2>
           <p className="font-body text-white mb-10 text-lg leading-relaxed">
-            Ontvang een melding bij elke nieuwe aflevering, plus exclusieve
-            achtergrondverhalen over de familiebedrijven in de podcast.
+            Elke donderdag één dilemma, één inzicht en één vraag over
+            ondernemen in een familiebedrijf. Gratis, rechtstreeks van Nick
+            Waterman.
           </p>
 
-          <NewsletterForm />
-
-          <p className="font-body text-white/80 text-xs mt-5">
-            Geen spam. Uitschrijven kan altijd. Wij respecteren jouw privacy.
-          </p>
+          <Link
+            href="/nieuwsbrief"
+            className="inline-flex items-center gap-2 bg-bb-plum-900 hover:bg-bb-plum-800 text-white font-semibold px-8 py-4 rounded-full transition-colors text-sm font-body"
+          >
+            Meld je gratis aan
+          </Link>
         </div>
       </section>
 
