@@ -290,7 +290,7 @@ export default function Home() {
                 src="/oos-en-nick.jpg"
                 alt="Oos Kesbeke en Nick Waterman"
                 fill
-                className="object-cover object-[center_30%]"
+                className="object-cover object-[center_13%]"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bb-plum-900/50 via-transparent to-transparent" />
