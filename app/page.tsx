@@ -284,6 +284,18 @@ export default function Home() {
               bedrijfsvoering. Luister op Spotify, Apple Podcasts en YouTube.
             </p>
 
+            {/* Mobile/tablet image */}
+            <div className="relative lg:hidden mt-8 h-56 sm:h-72 rounded-2xl overflow-hidden">
+              <Image
+                src="/oos-en-nick.jpg"
+                alt="Oos Kesbeke en Nick Waterman"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-bb-plum-900/50 via-transparent to-transparent" />
+            </div>
+
             {/* CTA buttons — all platforms equal */}
             <div className="flex flex-wrap gap-3 mt-10">
               <Link
@@ -343,9 +355,9 @@ export default function Home() {
 
       {/* ── Stats bar ── */}
       <section className="bg-bb-salmon relative z-10" style={{ clipPath: "polygon(0 0, 100% 0, 100% 85%, 0 100%)", paddingBottom: "4rem" }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-3">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-1 gap-6 sm:gap-0 sm:grid-cols-3">
           {stats.map((stat, i) => (
-            <div key={stat.label} className={`px-2 sm:px-6 lg:px-8 ${i > 0 ? "border-l border-white/25" : ""}`}>
+            <div key={stat.label} className={`px-2 sm:px-6 lg:px-8 ${i > 0 ? "sm:border-l sm:border-white/25" : ""}`}>
               <StatCounter value={stat.value} label={stat.label} />
             </div>
           ))}

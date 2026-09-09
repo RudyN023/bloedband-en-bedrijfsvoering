@@ -45,12 +45,6 @@ export function NavBar() {
             </Link>
           ))}
           <Link
-            href={newsletterHref}
-            className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors"
-          >
-            Nieuwsbrief
-          </Link>
-          <Link
             href={contactHref}
             className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors"
           >
@@ -59,6 +53,14 @@ export function NavBar() {
         </div>
 
         <div className="flex items-center gap-3">
+          {/* Nieuwsbrief CTA */}
+          <Link
+            href={newsletterHref}
+            className="hidden sm:flex items-center gap-2 bg-bb-teal-700 hover:bg-bb-teal-800 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors font-body"
+          >
+            Nieuwsbrief
+          </Link>
+
           {/* CTA */}
           <Link
             href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1?si=7cc4de525dd9482a"
@@ -102,18 +104,18 @@ export function NavBar() {
             </Link>
           ))}
           <Link
-            href={newsletterHref}
+            href={contactHref}
             onClick={() => setOpen(false)}
             className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors py-3 border-b border-white/10"
           >
-            Nieuwsbrief
+            Contact
           </Link>
           <Link
-            href={contactHref}
+            href={newsletterHref}
             onClick={() => setOpen(false)}
-            className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors py-3"
+            className="flex items-center justify-center gap-2 bg-bb-teal-700 hover:bg-bb-teal-800 text-white text-sm font-semibold rounded-full py-3 mt-4 transition-colors font-body"
           >
-            Contact
+            Nieuwsbrief
           </Link>
         </div>
       )}
