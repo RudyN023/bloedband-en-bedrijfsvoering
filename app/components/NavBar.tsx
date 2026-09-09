@@ -4,6 +4,15 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+function MailIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </svg>
+  );
+}
+
 function SpotifyIcon() {
   return (
     <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
@@ -56,9 +65,10 @@ export function NavBar() {
           {/* Nieuwsbrief CTA */}
           <Link
             href={newsletterHref}
-            className="hidden sm:flex items-center gap-2 bg-bb-teal-700 hover:bg-bb-teal-800 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors font-body"
+            className="flex items-center gap-2 bg-bb-teal-700 hover:bg-bb-teal-800 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors font-body"
           >
-            Nieuwsbrief
+            <MailIcon />
+            <span className="hidden sm:inline">Nieuwsbrief</span>
           </Link>
 
           {/* CTA */}
