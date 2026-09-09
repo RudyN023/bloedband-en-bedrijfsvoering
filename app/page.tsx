@@ -285,7 +285,7 @@ export default function Home() {
             </p>
 
             {/* Mobile/tablet image */}
-            <div className="relative lg:hidden mt-8 h-56 sm:h-72 rounded-2xl overflow-hidden">
+            <div className="relative lg:hidden mt-8 aspect-[3/2] rounded-2xl overflow-hidden">
               <Image
                 src="/oos-en-nick.jpg"
                 alt="Oos Kesbeke en Nick Waterman"
