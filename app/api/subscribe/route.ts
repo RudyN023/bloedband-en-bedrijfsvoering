@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+const DONDERDAG_DRIE_GROUP_ID = "198119657576596551";
+
 export async function POST(request: Request) {
   const { email } = await request.json();
 
@@ -16,7 +18,7 @@ export async function POST(request: Request) {
       "Content-Type": "application/json",
       Authorization: `Bearer ${process.env.MAILERLITE_API_KEY}`,
     },
-    body: JSON.stringify({ email }),
+    body: JSON.stringify({ email, groups: [DONDERDAG_DRIE_GROUP_ID] }),
   });
 
   if (!res.ok) {
