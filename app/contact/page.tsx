@@ -8,6 +8,17 @@ export const metadata: Metadata = {
   title: "Contact — Bloedband & Bedrijfsvoering",
   description:
     "Neem contact op met Nick Waterman over de podcast Bloedband & Bedrijfsvoering. Voor vragen, gastsuggesties of samenwerkingen.",
+  alternates: {
+    canonical: "https://bloedbandenbedrijfsvoering.nl/contact",
+  },
+  openGraph: {
+    title: "Contact — Bloedband & Bedrijfsvoering",
+    description:
+      "Neem contact op met Nick Waterman over de podcast Bloedband & Bedrijfsvoering. Voor vragen, gastsuggesties of samenwerkingen.",
+    type: "website",
+    url: "https://bloedbandenbedrijfsvoering.nl/contact",
+    siteName: "Bloedband & Bedrijfsvoering",
+  },
 };
 
 export default function ContactPage() {

@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://bloedbandenbedrijfsvoering.nl/nieuwsbrief",
   },
+  openGraph: {
+    title: "De Donderdag Drie — nieuwsbrief van Bloedband & Bedrijfsvoering",
+    description:
+      "Elke donderdag één dilemma, één inzicht en één vraag die je helpt scherper te kijken naar ondernemen in een familiebedrijf. Gratis, rechtstreeks van Nick Waterman.",
+    type: "website",
+    url: "https://bloedbandenbedrijfsvoering.nl/nieuwsbrief",
+    siteName: "Bloedband & Bedrijfsvoering",
+  },
 };
 
 const items = [
