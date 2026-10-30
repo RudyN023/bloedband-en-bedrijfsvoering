@@ -5,10 +5,15 @@ import { AnimateIn } from "./components/AnimateIn";
 import { StatCounter } from "./components/StatCounter";
 import { SpotifyIcon, AppleIcon, YouTubeIcon } from "./components/PlatformIcons";
 import { topEpisodes } from "./afleveringen";
+import { getNieuwsteAfleveringen, type Aflevering } from "./nieuwsteAfleveringen";
 
 // ─── Data ───────────────────────────────────────────────────────────────────
 
-const episodes = [
+// Nieuwste afleveringen worden automatisch van YouTube gehaald (elk uur ververst)
+export const revalidate = 3600;
+
+// Alleen gebruikt als YouTube niet bereikbaar is
+const fallbackEpisodes: Aflevering[] = [
   {
     title: "Ik heb de eerste dertig dagen gewoon mijn mond gehouden.",
     company: "Royal NNZ",
@@ -180,7 +185,9 @@ const jsonLd = {
   ],
 };
 
-export default function Home() {
+export default async function Home() {
+  const episodes = await getNieuwsteAfleveringen(fallbackEpisodes);
+
   return (
     <div className="overflow-x-hidden">
       <script
