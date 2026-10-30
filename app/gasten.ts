@@ -6,6 +6,7 @@ export type Gast = {
   titel?: string;
   beschrijving: string;
   foto: { src: string; alt: string };
+  logo?: { src: string; alt: string; width: number; height: number };
   extraFoto?: { src: string; alt: string; bijschrift?: string };
   links: { youtube?: string; spotify?: string; apple?: string };
 };
@@ -15,7 +16,7 @@ export const gasten: Gast[] = [
     slug: "vandervalk",
     naam: "Marlijn van der Valk",
     bedrijf: "Van der Valk Amersfoort",
-    welkom: "Gescand in Van der Valk Amersfoort? Welkom.",
+    welkom: "Welkom vanuit Van der Valk Amersfoort",
     beschrijving:
       "In deze aflevering spreekt Nick Waterman met Marlijn van der Valk van Van der Valk Amersfoort over ondernemen in een familiebedrijf.",
     foto: {
