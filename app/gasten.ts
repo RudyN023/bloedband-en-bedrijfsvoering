@@ -4,7 +4,6 @@ export type Gast = {
   bedrijf: string;
   welkom: string;
   titel?: string;
-  citaat?: string;
   beschrijving: string;
   foto: { src: string; alt: string };
   extraFoto?: { src: string; alt: string };
@@ -30,6 +29,10 @@ export const gasten: Gast[] = [
     links: {},
   },
 ];
+
+export function youtubeId(url?: string) {
+  return url?.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/)?.[1];
+}
 
 export function getGast(slug: string) {
   return gasten.find((g) => g.slug === slug);
