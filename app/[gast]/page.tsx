@@ -6,6 +6,7 @@ import { gasten, getGast, youtubeId } from "../gasten";
 import { topEpisodes, platformLinks } from "../afleveringen";
 import { NewsletterForm } from "../components/NewsletterForm";
 import { SpotifyIcon, AppleIcon } from "../components/PlatformIcons";
+import { BewaarKnop, TrackedLink, YouTubeVideo } from "../components/GastActies";
 
 type Props = { params: Promise<{ gast: string }> };
 
@@ -42,6 +43,9 @@ export default async function GastPage({ params }: Props) {
   if (!gast) notFound();
 
   const videoId = youtubeId(gast.links.youtube);
+  const titel = gast.titel ?? `${gast.naam} in Bloedband & Bedrijfsvoering`;
+  const url = `https://bloedbandenbedrijfsvoering.nl/${gast.slug}`;
+  const data = { gast: gast.slug };
 
   return (
     <div className="min-h-screen bg-bb-plum-900">
@@ -62,19 +66,12 @@ export default async function GastPage({ params }: Props) {
           <div className="max-w-2xl mx-auto px-6">
             <p className="font-body text-bb-salmon text-sm font-semibold">{gast.welkom}</p>
             <h1 className="font-display text-white text-4xl sm:text-5xl font-bold leading-tight mt-4">
-              {gast.titel ?? `${gast.naam} in Bloedband & Bedrijfsvoering`}
+              {titel}
             </h1>
 
             {videoId ? (
               <div className="relative aspect-video rounded-2xl overflow-hidden mt-8 bg-black">
-                <iframe
-                  src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0`}
-                  title={`${gast.naam} in Bloedband & Bedrijfsvoering`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  className="absolute inset-0 h-full w-full"
-                />
+                <YouTubeVideo id={videoId} title={titel} gast={gast.slug} />
               </div>
             ) : (
               <div className="relative aspect-video rounded-2xl overflow-hidden mt-8">
@@ -88,7 +85,9 @@ export default async function GastPage({ params }: Props) {
             <div className="mt-8">
               <p className="font-body text-white text-lg font-semibold mb-4">Liever luisteren?</p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link
+                <TrackedLink
+                  event="Spotify geklikt"
+                  data={data}
                   href={gast.links.spotify ?? platformLinks.spotify}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -96,8 +95,10 @@ export default async function GastPage({ params }: Props) {
                 >
                   <SpotifyIcon />
                   Spotify
-                </Link>
-                <Link
+                </TrackedLink>
+                <TrackedLink
+                  event="Apple Podcasts geklikt"
+                  data={data}
                   href={gast.links.apple ?? platformLinks.apple}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -105,7 +106,10 @@ export default async function GastPage({ params }: Props) {
                 >
                   <AppleIcon />
                   Apple Podcasts
-                </Link>
+                </TrackedLink>
+              </div>
+              <div className="mt-3">
+                <BewaarKnop url={url} titel={titel} gast={gast.slug} />
               </div>
             </div>
           </div>
@@ -126,9 +130,14 @@ export default async function GastPage({ params }: Props) {
               familiebedrijf te maken heeft.
             </p>
             {gast.extraFoto && (
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mt-8">
-                <Image src={gast.extraFoto.src} alt={gast.extraFoto.alt} fill className="object-cover" sizes="(max-width: 672px) 100vw, 672px" />
-              </div>
+              <figure className="mt-8">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                  <Image src={gast.extraFoto.src} alt={gast.extraFoto.alt} fill className="object-cover" sizes="(max-width: 672px) 100vw, 672px" />
+                </div>
+                {gast.extraFoto.bijschrift && (
+                  <figcaption className="font-body text-bb-plum-700 text-sm mt-3">{gast.extraFoto.bijschrift}</figcaption>
+                )}
+              </figure>
             )}
           </div>
         </section>
@@ -139,20 +148,37 @@ export default async function GastPage({ params }: Props) {
             <h2 className="font-display text-white text-3xl font-bold">Best beluisterde afleveringen</h2>
             <div className="flex flex-col divide-y divide-white/10 mt-6">
               {topEpisodes.map((ep) => (
-                <Link key={ep.rank} href={ep.href} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 py-5">
+                <div key={ep.rank} className="flex items-center gap-4 py-5">
                   <div className="flex-1">
                     <div className="font-body text-bb-salmon text-xs font-semibold tracking-wider uppercase mb-1">{ep.company}</div>
-                    <p className="font-display text-white text-lg font-bold leading-snug group-hover:text-bb-salmon transition-colors">
-                      &ldquo;{ep.title}&rdquo;
-                    </p>
+                    <p className="font-display text-white text-lg font-bold leading-snug">&ldquo;{ep.title}&rdquo;</p>
                     <p className="font-body text-white/60 text-sm mt-1">{ep.guest}</p>
                   </div>
-                  <span className="flex items-center justify-center w-12 h-12 rounded-full bg-bb-salmon group-hover:bg-white text-white group-hover:text-bb-plum-900 transition-colors shrink-0" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" className="w-5 h-5 ml-0.5" fill="currentColor" aria-hidden="true">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </span>
-                </Link>
+                  <div className="flex flex-col gap-2 shrink-0">
+                    <TrackedLink
+                      event="Aflevering geklikt"
+                      data={{ ...data, aflevering: ep.company, app: "Spotify" }}
+                      href={ep.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Luister ${ep.company} op Spotify`}
+                      className="flex items-center justify-center w-11 h-11 rounded-full bg-[#1DB954] hover:bg-[#1ed760] text-white transition-colors"
+                    >
+                      <SpotifyIcon />
+                    </TrackedLink>
+                    <TrackedLink
+                      event="Aflevering geklikt"
+                      data={{ ...data, aflevering: ep.company, app: "Apple Podcasts" }}
+                      href={ep.apple}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Luister ${ep.company} op Apple Podcasts`}
+                      className="flex items-center justify-center w-11 h-11 rounded-full bg-[#9933CC] hover:bg-[#aa44dd] text-white transition-colors"
+                    >
+                      <AppleIcon />
+                    </TrackedLink>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -166,7 +192,7 @@ export default async function GastPage({ params }: Props) {
               Elke donderdag één dilemma, één inzicht en één vraag over ondernemen in een
               familiebedrijf. Gratis in je inbox.
             </p>
-            <NewsletterForm />
+            <NewsletterForm bron={gast.slug} />
           </div>
         </section>
       </main>

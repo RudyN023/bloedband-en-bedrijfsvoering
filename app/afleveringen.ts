@@ -5,6 +5,7 @@ export const topEpisodes = [
     title: "Je moet niet heel oud worden en proberen nog de dagelijkse baas voor zo'n bedrijf te zijn.",
     guest: "Kommer en Arnout Damen",
     href: "https://open.spotify.com/episode/2Vp75oerce0Ey84UwIFEud?si=cc25d74e4c8a4c85",
+    apple: "https://podcasts.apple.com/nl/podcast/damen-shipyards-je-moet-niet-heel-oud-worden-en-proberen/id1715013376?i=1000675305669",
   },
   {
     rank: "02",
@@ -12,6 +13,7 @@ export const topEpisodes = [
     title: "Als je werk niet leuk is, ben je potentieel hartpatiënt.",
     guest: "Oos Kesbeke",
     href: "https://open.spotify.com/episode/0gMTFf2RtP3bRW1IBGIZXs?si=669d8b9753474d5c",
+    apple: "https://podcasts.apple.com/nl/podcast/kesbeke-als-je-werk-niet-leuk-is-ben-je-potentieel/id1715013376?i=1000637148252",
   },
   {
     rank: "03",
@@ -19,6 +21,7 @@ export const topEpisodes = [
     title: "De familiewaarden van mijn opa zijn nog steeds zichtbaar.",
     guest: "Ton Goedmakers",
     href: "https://open.spotify.com/episode/7of4JYaT7vRxRcHWnKT2zt?si=a31294241db640ee",
+    apple: "https://podcasts.apple.com/nl/podcast/vebego-de-familiewaarden-van-mijn-opa-zijn-nog/id1715013376?i=1000643906364",
   },
   {
     rank: "04",
@@ -26,6 +29,7 @@ export const topEpisodes = [
     title: "In zijn beleving was het eigenlijk logisch dat mijn jongere broertje directeur zou worden.",
     guest: "Brechtje van den Beuken",
     href: "https://open.spotify.com/episode/1D4c5smie2ijD11exySkMi?si=4856526e86af44d8",
+    apple: "https://podcasts.apple.com/nl/podcast/bosch-beton-in-zijn-beleving-was-het-eigenlijk-logisch/id1715013376?i=1000652943612",
   },
   {
     rank: "05",
@@ -33,6 +37,7 @@ export const topEpisodes = [
     title: "De reden waarom wij zo oud zijn geworden komt doordat we ons constant hebben weten te vernieuwen.",
     guest: "Peer Swinkels",
     href: "https://open.spotify.com/episode/4W9NCYaTECexjkpBDW2Ynp?si=ae2fed8f52bc4ba3",
+    apple: "https://podcasts.apple.com/nl/podcast/royal-swinkels-de-reden-waarom-wij-zo-oud-zijn/id1715013376?i=1000655884523",
   },
 ];
 

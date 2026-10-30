@@ -6,7 +6,7 @@ export type Gast = {
   titel?: string;
   beschrijving: string;
   foto: { src: string; alt: string };
-  extraFoto?: { src: string; alt: string };
+  extraFoto?: { src: string; alt: string; bijschrift?: string };
   links: { youtube?: string; spotify?: string; apple?: string };
 };
 
@@ -25,6 +25,7 @@ export const gasten: Gast[] = [
     extraFoto: {
       src: "/gasten/vandervalk-opname.jpg",
       alt: "Opname van de podcast met Marlijn van der Valk en Nick Waterman",
+      bijschrift: "Opgenomen in Van der Valk Amersfoort",
     },
     links: {},
   },

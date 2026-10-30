@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 
-export function NewsletterForm() {
+export function NewsletterForm({ bron }: { bron?: string } = {}) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -23,6 +24,7 @@ export function NewsletterForm() {
         throw new Error(data.error || "Er ging iets mis");
       }
 
+      if (bron) track("Nieuwsbrief aanmelding", { bron });
       setStatus("success");
       setMessage("Je bent aangemeld!");
       setEmail("");
