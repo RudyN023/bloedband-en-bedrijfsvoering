@@ -139,12 +139,19 @@ export default async function GastPage({ params }: Props) {
             <h2 className="font-display text-white text-3xl font-bold">Best beluisterde afleveringen</h2>
             <div className="flex flex-col divide-y divide-white/10 mt-6">
               {topEpisodes.map((ep) => (
-                <Link key={ep.rank} href={ep.href} target="_blank" rel="noopener noreferrer" className="group py-5">
-                  <div className="font-body text-bb-salmon text-xs font-semibold tracking-wider uppercase mb-1">{ep.company}</div>
-                  <p className="font-display text-white text-lg font-bold leading-snug group-hover:text-bb-salmon transition-colors">
-                    &ldquo;{ep.title}&rdquo;
-                  </p>
-                  <p className="font-body text-white/60 text-sm mt-1">{ep.guest}</p>
+                <Link key={ep.rank} href={ep.href} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 py-5">
+                  <div className="flex-1">
+                    <div className="font-body text-bb-salmon text-xs font-semibold tracking-wider uppercase mb-1">{ep.company}</div>
+                    <p className="font-display text-white text-lg font-bold leading-snug group-hover:text-bb-salmon transition-colors">
+                      &ldquo;{ep.title}&rdquo;
+                    </p>
+                    <p className="font-body text-white/60 text-sm mt-1">{ep.guest}</p>
+                  </div>
+                  <span className="flex items-center justify-center w-12 h-12 rounded-full bg-bb-salmon group-hover:bg-white text-white group-hover:text-bb-plum-900 transition-colors shrink-0" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" className="w-5 h-5 ml-0.5" fill="currentColor" aria-hidden="true">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </span>
                 </Link>
               ))}
             </div>
