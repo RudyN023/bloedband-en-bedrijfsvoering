@@ -28,7 +28,7 @@ export const gasten: Gast[] = [
       alt: "Opname van de podcast met Marlijn van der Valk en Nick Waterman",
       bijschrift: "Opgenomen in Van der Valk Amersfoort",
     },
-    links: {},
+    links: { youtube: "https://youtu.be/__NN6UpYmxM" },
   },
 ];
 
