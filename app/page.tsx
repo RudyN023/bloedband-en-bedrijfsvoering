@@ -654,13 +654,13 @@ export default async function Home() {
       </section>
 
       {/* ── Partners ── */}
-      <section className="bg-bb-plum-900 py-16 border-t border-white/10">
+      <section id="partners" className="bg-bb-plum-900 py-16 border-t border-white/10">
         <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
           <p className="font-body text-white/50 text-xs font-semibold tracking-[0.2em] uppercase mb-10">
             Deze podcast wordt mede mogelijk gemaakt door
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-14 lg:gap-20">
-            <Link href="https://www.quatrevingtquatre.nl/" target="_blank" rel="noopener noreferrer" className="relative h-7 w-20 sm:h-10 sm:w-40 opacity-70 hover:opacity-100 transition-opacity">
+          <div className="grid grid-cols-2 items-center justify-items-center gap-x-6 gap-y-8 sm:gap-y-12 lg:flex lg:justify-center lg:gap-20">
+            <Link href="https://www.quatrevingtquatre.nl/" target="_blank" rel="noopener noreferrer" className="relative h-10 w-28 sm:h-10 sm:w-40 opacity-70 hover:opacity-100 transition-opacity">
               <Image
                 src="/logo-qvq.webp"
                 alt="Quatre Vingt Quatre"
@@ -668,7 +668,7 @@ export default async function Home() {
                 className="object-contain brightness-0 invert"
               />
             </Link>
-            <Link href="https://www.studiopodcast.nl/" target="_blank" rel="noopener noreferrer" className="relative h-7 w-28 sm:h-10 sm:w-52 opacity-70 hover:opacity-100 transition-opacity">
+            <Link href="https://www.studiopodcast.nl/" target="_blank" rel="noopener noreferrer" className="relative h-8 w-36 sm:h-10 sm:w-52 opacity-70 hover:opacity-100 transition-opacity">
               <Image
                 src="/logo-studiopodcast.png"
                 alt="Studio Podcast"
@@ -676,10 +676,18 @@ export default async function Home() {
                 className="object-contain brightness-0 invert"
               />
             </Link>
-            <Link href="https://fbned.nl/nl" target="_blank" rel="noopener noreferrer" className="relative h-8 w-16 sm:h-14 sm:w-36 opacity-70 hover:opacity-100 transition-opacity">
+            <Link href="https://fbned.nl/nl" target="_blank" rel="noopener noreferrer" className="relative h-11 w-28 sm:h-14 sm:w-36 opacity-70 hover:opacity-100 transition-opacity">
               <Image
                 src="/logo-fbned.png"
                 alt="FBNed — FamilieBedrijven Nederland"
+                fill
+                className="object-contain brightness-0 invert"
+              />
+            </Link>
+            <Link href="https://www.michaelbaatje.nl/" target="_blank" rel="noopener noreferrer" className="relative h-12 w-24 sm:h-16 sm:w-28 opacity-70 hover:opacity-100 transition-opacity">
+              <Image
+                src="/logo-baatje.webp"
+                alt="Baatje Videoproductie"
                 fill
                 className="object-contain brightness-0 invert"
               />
