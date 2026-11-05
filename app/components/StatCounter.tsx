@@ -33,6 +33,10 @@ export function StatCounter({ value, label }: StatCounterProps) {
 
   useEffect(() => {
     if (!started) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setCount(numeric);
+      return;
+    }
     const duration = 1200;
     const steps = 40;
     const interval = duration / steps;
@@ -49,10 +53,10 @@ export function StatCounter({ value, label }: StatCounterProps) {
 
   return (
     <div ref={ref} className="text-center">
-      <div className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white drop-shadow-sm tabular-nums">
+      <div className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-white tabular-nums">
         {count}{suffix}
       </div>
-      <div className="font-body text-white/80 text-xs sm:text-sm mt-1.5 tracking-widest uppercase">
+      <div className="font-body text-white/80 text-sm mt-1">
         {label}
       </div>
     </div>

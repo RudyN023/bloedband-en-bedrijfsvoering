@@ -94,7 +94,7 @@ function ThemeIcon({ name }: { name: string }) {
   const icons: Record<string, React.ReactNode> = {
     succession: (
       // Estafettestokje / overdracht
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 shrink-0">
         <circle cx="7" cy="6" r="2.5" />
         <circle cx="17" cy="6" r="2.5" />
         <path d="M7 8.5v3l3 2v4" />
@@ -104,7 +104,7 @@ function ThemeIcon({ name }: { name: string }) {
     ),
     ownership: (
       // Sleutel
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 shrink-0">
         <circle cx="8" cy="15" r="5" />
         <circle cx="8" cy="15" r="2" />
         <path d="M11.5 11.5L21 2" />
@@ -114,7 +114,7 @@ function ThemeIcon({ name }: { name: string }) {
     ),
     family: (
       // Hart met handen
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 shrink-0">
         <path d="M19.5 12.572l-7.5 7.428-7.5-7.428A5 5 0 0 1 12 6.006a5 5 0 0 1 7.5 6.566z" />
         <path d="M12 8v5" />
         <path d="M9.5 11l2.5 2 2.5-2" />
@@ -122,7 +122,7 @@ function ThemeIcon({ name }: { name: string }) {
     ),
     professionalization: (
       // Persoon met tandwiel
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 shrink-0">
         <circle cx="9" cy="7" r="3" />
         <path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 1.5.23" />
         <circle cx="18.5" cy="17.5" r="2" />
@@ -131,7 +131,7 @@ function ThemeIcon({ name }: { name: string }) {
     ),
     generation: (
       // Boom met ringen (groei)
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 shrink-0">
         <path d="M12 22V8" />
         <path d="M8 22h8" />
         <path d="M7 12c-2-2-2-5 0-7 1.5 1 3.5 1.5 5 1 1.5.5 3.5 0 5-1 2 2 2 5 0 7-1.5-1-3.5-1-5 0-1.5-1-3.5-1-5 0z" />
@@ -139,7 +139,7 @@ function ThemeIcon({ name }: { name: string }) {
     ),
     continuity: (
       // Oneindigheidsteken
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 shrink-0">
         <path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4z" />
       </svg>
     ),
@@ -211,7 +211,7 @@ export default async function Home() {
             </p>
 
             {/* Heading */}
-            <h1 className="font-display font-bold leading-[1.05]">
+            <h1 className="font-display font-semibold leading-[1.05]">
               <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white">
                 Van keukentafel
               </span>
@@ -228,6 +228,36 @@ export default async function Home() {
               bedrijfsvoering. Luister op Spotify, Apple Podcasts en YouTube.
             </p>
 
+            {/* Drie platforms, even belangrijk */}
+            <div className="grid grid-cols-3 gap-2 sm:flex sm:gap-3 mt-10">
+              <Link
+                href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1?si=7cc4de525dd9482a"
+                target="_blank" rel="noopener noreferrer"
+                className="flex items-center justify-center gap-1.5 sm:gap-2 bg-bb-salmon hover:bg-bb-salmon-light text-white font-semibold px-2 sm:px-6 py-3.5 rounded-lg transition-colors text-sm font-body whitespace-nowrap"
+              >
+                <SpotifyIcon />
+                Spotify
+              </Link>
+              <Link
+                href="https://podcasts.apple.com/nl/podcast/bloedband-bedrijfsvoering/id1715013376"
+                target="_blank" rel="noopener noreferrer"
+                aria-label="Apple Podcasts"
+                className="flex items-center justify-center gap-1.5 sm:gap-2 bg-bb-salmon hover:bg-bb-salmon-light text-white font-semibold px-2 sm:px-6 py-3.5 rounded-lg transition-colors text-sm font-body whitespace-nowrap"
+              >
+                <AppleIcon />
+                <span className="sm:hidden">Apple</span>
+                <span className="hidden sm:inline">Apple Podcasts</span>
+              </Link>
+              <Link
+                href="https://www.youtube.com/@Bloedbandenbedrijfsvoering"
+                target="_blank" rel="noopener noreferrer"
+                className="flex items-center justify-center gap-1.5 sm:gap-2 bg-bb-salmon hover:bg-bb-salmon-light text-white font-semibold px-2 sm:px-6 py-3.5 rounded-lg transition-colors text-sm font-body whitespace-nowrap"
+              >
+                <YouTubeIcon />
+                YouTube
+              </Link>
+            </div>
+
             {/* Mobile/tablet image */}
             <div className="relative lg:hidden mt-8 aspect-[3/2] rounded-2xl overflow-hidden">
               <Image
@@ -238,34 +268,6 @@ export default async function Home() {
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bb-plum-900/50 via-transparent to-transparent" />
-            </div>
-
-            {/* CTA buttons — all platforms equal */}
-            <div className="flex flex-wrap gap-3 mt-10">
-              <Link
-                href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1?si=7cc4de525dd9482a"
-                target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2.5 bg-bb-salmon hover:bg-bb-salmon-light text-white font-semibold px-6 py-3.5 rounded-full transition-colors text-sm font-body"
-              >
-                <SpotifyIcon />
-                Spotify
-              </Link>
-              <Link
-                href="https://podcasts.apple.com/nl/podcast/bloedband-bedrijfsvoering/id1715013376"
-                target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2.5 bg-bb-salmon hover:bg-bb-salmon-light text-white font-semibold px-6 py-3.5 rounded-full transition-colors text-sm font-body"
-              >
-                <AppleIcon />
-                Apple Podcasts
-              </Link>
-              <Link
-                href="https://www.youtube.com/@Bloedbandenbedrijfsvoering"
-                target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2.5 bg-bb-salmon hover:bg-bb-salmon-light text-white font-semibold px-6 py-3.5 rounded-full transition-colors text-sm font-body"
-              >
-                <YouTubeIcon />
-                YouTube
-              </Link>
             </div>
           </div>
 
@@ -284,8 +286,8 @@ export default async function Home() {
             />
 
             {/* Floating card */}
-            <div className="absolute bottom-24 right-8 z-20 bg-bb-teal-900/90 backdrop-blur-sm border border-bb-teal-700/40 rounded-2xl p-6 max-w-[180px]">
-              <div className="font-display text-5xl font-bold text-white leading-none">
+            <div className="absolute bottom-24 right-8 z-20 bg-bb-teal-900/90 backdrop-blur-sm border border-bb-teal-700/40 rounded-2xl p-6 max-w-44">
+              <div className="font-display text-5xl font-semibold text-white leading-none">
                 45<span className="text-bb-salmon">+</span>
               </div>
               <div className="font-body text-white/60 text-xs mt-2 leading-relaxed">
@@ -298,7 +300,7 @@ export default async function Home() {
       </section>
 
       {/* ── Stats bar ── */}
-      <section className="bg-bb-salmon relative z-10" style={{ clipPath: "polygon(0 0, 100% 0, 100% 85%, 0 100%)", paddingBottom: "4rem" }}>
+      <section className="bg-bb-salmon relative z-10" style={{ clipPath: "polygon(0 0, 100% 0, 100% 80%, 0 100%)", paddingBottom: "2rem" }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-1 gap-6 sm:gap-0 sm:grid-cols-3">
           {stats.map((stat, i) => (
             <div key={stat.label} className={`px-2 sm:px-6 lg:px-8 ${i > 0 ? "sm:border-l sm:border-white/25" : ""}`}>
@@ -315,7 +317,7 @@ export default async function Home() {
           <AnimateIn>
           <div className="flex items-end justify-between mb-14">
             <div>
-              <h2 className="font-display text-white text-4xl lg:text-5xl font-bold">
+              <h2 className="font-display text-white text-4xl lg:text-5xl font-semibold">
                 Nieuwste afleveringen
               </h2>
             </div>
@@ -335,7 +337,7 @@ export default async function Home() {
           {/* Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {episodes.map((episode, i) => (
-              <AnimateIn key={episode.title} delay={i * 100}>
+              <AnimateIn key={episode.title} delay={i * 60}>
               <div
                 className="group bg-bb-teal-800 rounded-2xl overflow-hidden hover:bg-bb-teal-700 transition-colors h-full"
               >
@@ -346,7 +348,7 @@ export default async function Home() {
                     src={episode.image}
                     alt={episode.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="w-14 h-14 rounded-full bg-bb-salmon/90 flex items-center justify-center">
@@ -357,10 +359,10 @@ export default async function Home() {
 
                 {/* Content */}
                 <div className="p-6">
-                  <div className="font-body text-bb-salmon text-xs font-semibold tracking-wider uppercase mb-3">
+                  <div className="font-body text-bb-salmon text-sm font-medium mb-3">
                     {episode.company}
                   </div>
-                  <h3 className="font-display text-white text-xl font-bold leading-snug mb-3 group-hover:text-bb-salmon transition-colors">
+                  <h3 className="font-display text-white text-xl font-semibold leading-snug mb-3 group-hover:text-bb-salmon transition-colors">
                     <Link href={episode.href} target="_blank" rel="noopener noreferrer" className="hover:underline">
                       {episode.title}
                     </Link>
@@ -405,7 +407,7 @@ export default async function Home() {
             <Link
               href="https://www.youtube.com/@Bloedbandenbedrijfsvoering"
               target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-white/30 text-white px-6 py-3 rounded-full text-sm font-semibold hover:border-white transition-colors font-body"
+              className="inline-flex items-center gap-2 border border-white/30 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:border-white transition-colors font-body"
             >
               Alle afleveringen →
             </Link>
@@ -419,7 +421,7 @@ export default async function Home() {
           <AnimateIn>
           <div className="flex items-end justify-between mb-14">
             <div>
-              <h2 className="font-display text-white text-4xl lg:text-5xl font-bold">
+              <h2 className="font-display text-white text-4xl lg:text-5xl font-semibold">
                 Best beluisterde afleveringen
               </h2>
             </div>
@@ -436,7 +438,7 @@ export default async function Home() {
 
           <div className="flex flex-col divide-y divide-white/10">
             {topEpisodes.map((ep, i) => (
-              <AnimateIn key={ep.rank} delay={i * 80}>
+              <AnimateIn key={ep.rank} delay={i * 60}>
               <Link
                 href={ep.href}
                 target="_blank" rel="noopener noreferrer"
@@ -446,15 +448,15 @@ export default async function Home() {
                   {ep.rank}
                 </span>
                 <div className="flex-1 min-w-0">
-                  <div className="font-body text-bb-salmon text-xs font-semibold tracking-wider uppercase mb-1">
+                  <div className="font-body text-bb-salmon text-sm font-medium mb-1">
                     {ep.company}
                   </div>
-                  <p className="font-display text-white text-base lg:text-xl font-bold leading-snug group-hover:text-bb-salmon transition-colors">
+                  <p className="font-display text-white text-base lg:text-xl font-semibold leading-snug group-hover:text-bb-salmon transition-colors">
                     &ldquo;{ep.title}&rdquo;
                   </p>
                   <p className="font-body text-white/40 text-xs lg:text-sm mt-1">{ep.guest}</p>
                 </div>
-                <div className="shrink-0 text-white/20 group-hover:text-bb-salmon transition-all group-hover:translate-x-1">
+                <div className="shrink-0 text-white/20 group-hover:text-bb-salmon transition-[color,transform] group-hover:translate-x-1">
                   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
@@ -472,7 +474,7 @@ export default async function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image */}
             <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden aspect-[3/2] sm:aspect-[4/3] lg:aspect-[4/5] shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden aspect-[3/2] sm:aspect-[4/3] lg:aspect-[4/5] shadow-lg">
                 <Image
                   src="/nick-waterman.png"
                   alt="Nick Waterman, presentator van Bloedband & Bedrijfsvoering"
@@ -482,7 +484,7 @@ export default async function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-bb-plum-900/70 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
                   <div>
-                    <div className="font-display text-white text-xl font-bold">
+                    <div className="font-display text-white text-xl font-semibold">
                       Nick Waterman
                     </div>
                     <div className="font-body text-white/70 text-sm mt-0.5">
@@ -501,9 +503,6 @@ export default async function Home() {
                   </Link>
                 </div>
               </div>
-              {/* Decorative circles */}
-              <div className="absolute -top-6 -left-6 w-24 h-24 rounded-full bg-bb-salmon opacity-20 pointer-events-none" />
-              <div className="absolute -bottom-8 -right-8 w-40 h-40 rounded-full bg-bb-teal-700 opacity-15 pointer-events-none" />
             </div>
 
             {/* Text */}
@@ -514,7 +513,7 @@ export default async function Home() {
                 zussen.&rdquo;
               </blockquote>
 
-              <p className="font-body text-bb-plum-800 leading-relaxed mb-5 text-[15px]">
+              <p className="font-body text-bb-plum-800 leading-relaxed mb-5 text-base">
                 In de podcast{" "}
                 <strong className="font-semibold">
                   Bloedband &amp; Bedrijfsvoering
@@ -522,14 +521,14 @@ export default async function Home() {
                 duiken we in de wereld van succesvolle familiebedrijven.
               </p>
 
-              <p className="font-body text-bb-plum-800 leading-relaxed mb-5 text-[15px]">
+              <p className="font-body text-bb-plum-800 leading-relaxed mb-5 text-base">
                 Familiebedrijven vormen de ruggengraat van de Nederlandse
                 economie. Ze zorgen voor economische stabiliteit en zijn goed
                 voor één op de drie banen in Nederland. Daarmee zijn ze van
                 grote waarde, zowel landelijk als in hun eigen regio.
               </p>
 
-              <p className="font-body text-bb-plum-800 leading-relaxed mb-8 text-[15px]">
+              <p className="font-body text-bb-plum-800 leading-relaxed mb-8 text-base">
                 Met deze serie geven we een inkijkje in het reilen en zeilen
                 van deze unieke ondernemingen. We laten zien wat er speelt
                 achter de schermen, welke uitdagingen er zijn en hoe
@@ -540,7 +539,7 @@ export default async function Home() {
                 <Link
                   href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1?si=7cc4de525dd9482a"
                   target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-bb-plum-900 hover:bg-bb-plum-800 text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors font-body"
+                  className="flex items-center gap-2 bg-bb-plum-900 hover:bg-bb-plum-800 text-white text-sm font-semibold px-6 py-3 rounded-lg transition-colors font-body"
                 >
                   <SpotifyIcon />
                   Luister op Spotify
@@ -548,7 +547,7 @@ export default async function Home() {
                 <Link
                   href="https://www.youtube.com/@Bloedbandenbedrijfsvoering"
                   target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-2 border border-bb-plum-700 text-bb-plum-900 hover:bg-bb-plum-900 hover:text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors font-body"
+                  className="flex items-center gap-2 border border-bb-plum-700 text-bb-plum-900 hover:bg-bb-plum-900 hover:text-white text-sm font-semibold px-6 py-3 rounded-lg transition-colors font-body"
                 >
                   Bekijk afleveringen
                 </Link>
@@ -561,25 +560,23 @@ export default async function Home() {
       {/* ── Themes ── */}
       <section className="bg-bb-sage-100 py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="font-display text-bb-plum-900 text-4xl lg:text-5xl font-bold">
+          <div className="mb-12">
+            <h2 className="font-display text-bb-plum-900 text-4xl lg:text-5xl font-semibold">
               Waar gaat het over?
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
             {themes.map((theme, i) => (
-              <AnimateIn key={theme.title} delay={i * 80}>
-              <div
-                className="bg-white rounded-2xl p-8 border-t-4 border-bb-salmon shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-default"
-              >
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-bb-salmon/10 text-bb-salmon mb-6">
+              <AnimateIn key={theme.title} delay={i * 60}>
+              <div className="border-t border-bb-plum-900/15 pt-6">
+                <div className="flex items-center gap-3 text-bb-plum-700">
                   <ThemeIcon name={theme.icon} />
+                  <h3 className="font-display text-bb-plum-900 text-2xl font-semibold">
+                    {theme.title}
+                  </h3>
                 </div>
-                <h3 className="font-display text-bb-plum-900 text-2xl font-bold mb-3 group-hover:text-bb-teal-800 transition-colors">
-                  {theme.title}
-                </h3>
-                <p className="font-body text-bb-plum-700 leading-relaxed text-sm">
+                <p className="font-body text-bb-plum-800 leading-relaxed mt-3">
                   {theme.description}
                 </p>
               </div>
@@ -590,9 +587,9 @@ export default async function Home() {
       </section>
 
       {/* ── Platforms ── */}
-      <section className="bg-bb-plum-900 py-24">
+      <section id="luisteren" className="bg-bb-plum-900 py-24 scroll-mt-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-display text-white text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="font-display text-white text-4xl lg:text-5xl font-semibold mb-4">
             Luister waar jij wilt
           </h2>
           <p className="font-body text-white/60 mb-14 max-w-lg mx-auto">
@@ -604,7 +601,7 @@ export default async function Home() {
             <Link
               href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1?si=7cc4de525dd9482a"
               target="_blank" rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 bg-[#1DB954] hover:bg-[#1ed760] text-white font-semibold px-8 py-4 rounded-full transition-colors text-sm font-body"
+              className="flex items-center justify-center gap-3 bg-[#1DB954] hover:bg-[#1ed760] text-white font-semibold px-8 py-4 rounded-lg transition-colors text-sm font-body"
             >
               <SpotifyIcon />
               Spotify
@@ -612,7 +609,7 @@ export default async function Home() {
             <Link
               href="https://podcasts.apple.com/nl/podcast/bloedband-bedrijfsvoering/id1715013376"
               target="_blank" rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 bg-[#9933CC] hover:bg-[#aa44dd] text-white font-semibold px-8 py-4 rounded-full transition-colors text-sm font-body"
+              className="flex items-center justify-center gap-3 bg-[#9933CC] hover:bg-[#aa44dd] text-white font-semibold px-8 py-4 rounded-lg transition-colors text-sm font-body"
             >
               <AppleIcon />
               Apple Podcasts
@@ -620,7 +617,7 @@ export default async function Home() {
             <Link
               href="https://www.youtube.com/@Bloedbandenbedrijfsvoering"
               target="_blank" rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 bg-[#FF0000] hover:bg-[#cc0000] text-white font-semibold px-8 py-4 rounded-full transition-colors text-sm font-body"
+              className="flex items-center justify-center gap-3 bg-[#FF0000] hover:bg-[#cc0000] text-white font-semibold px-8 py-4 rounded-lg transition-colors text-sm font-body"
             >
               <YouTubeIcon />
               YouTube
@@ -632,7 +629,7 @@ export default async function Home() {
       {/* ── Newsletter ── */}
       <section className="bg-bb-salmon py-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-display text-white text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="font-display text-white text-4xl lg:text-5xl font-semibold mb-4">
             De Donderdag Drie
           </h2>
           <p className="font-body text-white mb-10 text-lg leading-relaxed">
@@ -646,7 +643,7 @@ export default async function Home() {
 
           <Link
             href="/nieuwsbrief"
-            className="inline-flex items-center gap-2 bg-bb-plum-900 hover:bg-bb-plum-800 text-white font-semibold px-8 py-4 rounded-full transition-colors text-sm font-body"
+            className="inline-flex items-center gap-2 bg-bb-plum-900 hover:bg-bb-plum-800 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-sm font-body"
           >
             Meld je gratis aan
           </Link>
@@ -656,7 +653,7 @@ export default async function Home() {
       {/* ── Partners ── */}
       <section id="partners" className="bg-bb-plum-900 py-16 border-t border-white/10">
         <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
-          <p className="font-body text-white/50 text-xs font-semibold tracking-[0.2em] uppercase mb-10">
+          <p className="font-body text-white/50 text-sm font-medium mb-10">
             Deze podcast wordt mede mogelijk gemaakt door
           </p>
           <div className="grid grid-cols-2 items-center justify-items-center gap-x-6 gap-y-8 sm:gap-y-12 lg:flex lg:justify-center lg:gap-20">
@@ -679,7 +676,7 @@ export default async function Home() {
             <Link href="https://fbned.nl/nl" target="_blank" rel="noopener noreferrer" className="relative h-11 w-28 sm:h-14 sm:w-36 opacity-70 hover:opacity-100 transition-opacity">
               <Image
                 src="/logo-fbned.png"
-                alt="FBNed — FamilieBedrijven Nederland"
+                alt="FBNed, FamilieBedrijven Nederland"
                 fill
                 className="object-contain brightness-0 invert"
               />
@@ -726,7 +723,7 @@ export default async function Home() {
 
             {/* Navigation */}
             <div>
-              <h4 className="font-body text-white text-xs font-semibold tracking-[0.2em] uppercase mb-5">
+              <h4 className="font-body text-white text-sm font-medium mb-5">
                 Navigatie
               </h4>
               <ul className="space-y-3">
@@ -749,7 +746,7 @@ export default async function Home() {
 
             {/* Listen */}
             <div>
-              <h4 className="font-body text-white text-xs font-semibold tracking-[0.2em] uppercase mb-5">
+              <h4 className="font-body text-white text-sm font-medium mb-5">
                 Luister op
               </h4>
               <ul className="space-y-3">
@@ -775,8 +772,7 @@ export default async function Home() {
           {/* Bottom */}
           <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="font-body text-white/30 text-xs">
-              © {new Date().getFullYear()} Bloedband &amp; Bedrijfsvoering. Alle rechten
-              voorbehouden.
+              {`© ${new Date().getFullYear()} Bloedband & Bedrijfsvoering. Alle rechten voorbehouden.`}
             </p>
           </div>
         </div>

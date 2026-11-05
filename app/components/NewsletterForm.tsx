@@ -46,7 +46,7 @@ export function NewsletterForm({ bron }: { bron?: string } = {}) {
         onChange={(e) => setEmail(e.target.value)}
         placeholder="jouw@emailadres.nl"
         disabled={status === "loading"}
-        className="flex-1 bg-white border border-bb-plum-900/15 placeholder:text-bb-plum-700/70 text-bb-plum-900 rounded-full px-6 py-4 text-base focus:outline-none focus:border-bb-plum-900 font-body disabled:opacity-50"
+        className="flex-1 bg-white border border-bb-plum-900/15 placeholder:text-bb-plum-700/70 text-bb-plum-900 rounded-lg px-6 py-4 text-base focus:outline-none focus:border-bb-plum-900 font-body disabled:opacity-50"
       />
       {status === "success" ? (
         <p className="text-bb-plum-900 font-semibold px-8 py-4 text-sm font-body self-center">
@@ -57,7 +57,7 @@ export function NewsletterForm({ bron }: { bron?: string } = {}) {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="bg-bb-plum-900 hover:bg-bb-plum-800 text-white font-semibold px-8 py-4 rounded-full transition-colors text-sm whitespace-nowrap font-body disabled:opacity-50"
+            className="bg-bb-plum-900 hover:bg-bb-plum-800 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-sm whitespace-nowrap font-body disabled:opacity-50"
           >
             {status === "loading" ? "Even geduld..." : "Aanmelden"}
           </button>

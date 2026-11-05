@@ -57,7 +57,7 @@ export function YouTubeVideo({ id, title, gast }: { id: string; title: string; g
         sizes="(max-width: 672px) 100vw, 672px"
       />
       <span className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
-        <span className="flex items-center justify-center w-20 h-20 rounded-full bg-bb-salmon group-hover:scale-105 transition-transform shadow-xl">
+        <span className="flex items-center justify-center w-20 h-20 rounded-full bg-bb-salmon group-hover:bg-bb-salmon-light transition-colors shadow-xl">
           <svg viewBox="0 0 24 24" className="w-9 h-9 ml-1 text-white" fill="currentColor" aria-hidden="true">
             <path d="M8 5v14l11-7z" />
           </svg>

@@ -5,14 +5,14 @@ import { NavBar } from "../components/NavBar";
 import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact — Bloedband & Bedrijfsvoering",
+  title: "Contact | Bloedband & Bedrijfsvoering",
   description:
     "Neem contact op met Nick Waterman over de podcast Bloedband & Bedrijfsvoering. Voor vragen, gastsuggesties of samenwerkingen.",
   alternates: {
     canonical: "https://bloedbandenbedrijfsvoering.nl/contact",
   },
   openGraph: {
-    title: "Contact — Bloedband & Bedrijfsvoering",
+    title: "Contact | Bloedband & Bedrijfsvoering",
     description:
       "Neem contact op met Nick Waterman over de podcast Bloedband & Bedrijfsvoering. Voor vragen, gastsuggesties of samenwerkingen.",
     type: "website",
@@ -32,12 +32,8 @@ export default function ContactPage() {
           {/* Accent bar */}
           <div className="absolute left-0 top-0 bottom-0 w-1 bg-bb-salmon" />
 
-          {/* Decorative circles */}
-          <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-bb-salmon opacity-5 pointer-events-none" />
-          <div className="absolute bottom-0 left-1/3 w-60 h-60 rounded-full bg-bb-teal-700 opacity-10 pointer-events-none" />
-
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight max-w-2xl">
+            <h1 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight max-w-2xl">
               Laten we kennismaken
             </h1>
             <p className="font-body text-white/60 mt-5 text-lg max-w-xl leading-relaxed">
@@ -54,7 +50,7 @@ export default function ContactPage() {
 
               {/* Form */}
               <div className="bg-bb-sage-100/50 rounded-3xl p-8 lg:p-10 shadow-sm">
-                <h2 className="font-display text-bb-plum-900 text-2xl font-bold mb-8">
+                <h2 className="font-display text-bb-plum-900 text-2xl font-semibold mb-8">
                   Stuur een bericht
                 </h2>
                 <ContactForm />
@@ -74,7 +70,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="font-display text-bb-plum-900 text-xl font-bold leading-tight">
+                      <span className="font-display text-bb-plum-900 text-xl font-semibold leading-tight">
                         Nick Waterman
                       </span>
                       <Link
@@ -103,7 +99,7 @@ export default function ContactPage() {
 
                 {/* Direct contact options */}
                 <div className="flex flex-col gap-5">
-                  <h3 className="font-body text-bb-plum-800 text-xs font-semibold tracking-[0.2em] uppercase">
+                  <h3 className="font-body text-bb-plum-800 text-sm font-medium">
                     Direct contact
                   </h3>
 

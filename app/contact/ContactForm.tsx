@@ -39,7 +39,7 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
       <div className="grid sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-2">
-          <label className="font-body text-bb-plum-800 text-xs font-semibold tracking-wider uppercase">
+          <label className="font-body text-bb-plum-800 text-sm font-medium">
             Naam <span className="text-bb-salmon">*</span>
           </label>
           <input
@@ -51,7 +51,7 @@ export function ContactForm() {
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label className="font-body text-bb-plum-800 text-xs font-semibold tracking-wider uppercase">
+          <label className="font-body text-bb-plum-800 text-sm font-medium">
             Organisatie
           </label>
           <input
@@ -64,7 +64,7 @@ export function ContactForm() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label className="font-body text-bb-plum-800 text-xs font-semibold tracking-wider uppercase">
+        <label className="font-body text-bb-plum-800 text-sm font-medium">
           E-mailadres <span className="text-bb-salmon">*</span>
         </label>
         <input
@@ -77,7 +77,7 @@ export function ContactForm() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label className="font-body text-bb-plum-800 text-xs font-semibold tracking-wider uppercase">
+        <label className="font-body text-bb-plum-800 text-sm font-medium">
           Bericht <span className="text-bb-salmon">*</span>
         </label>
         <textarea
@@ -92,7 +92,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending" || status === "sent"}
-        className="self-start flex items-center gap-2 bg-bb-plum-900 hover:bg-bb-plum-800 disabled:opacity-60 text-white font-semibold px-8 py-4 rounded-full transition-colors text-sm font-body"
+        className="self-start flex items-center gap-2 bg-bb-plum-900 hover:bg-bb-plum-800 disabled:opacity-60 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-sm font-body"
       >
         {status === "sending" ? "Versturen…" : status === "sent" ? "Verstuurd ✓" : "Verstuur bericht"}
         {status === "idle" && (

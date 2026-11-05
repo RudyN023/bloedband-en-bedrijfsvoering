@@ -4,14 +4,14 @@ import type { Metadata } from "next";
 import { NewsletterForm } from "../components/NewsletterForm";
 
 export const metadata: Metadata = {
-  title: "De Donderdag Drie — nieuwsbrief van Bloedband & Bedrijfsvoering",
+  title: "De Donderdag Drie | nieuwsbrief van Bloedband & Bedrijfsvoering",
   description:
     "Elke donderdag één dilemma, één inzicht en één vraag die je helpt scherper te kijken naar ondernemen in een familiebedrijf. Gratis, rechtstreeks van Nick Waterman.",
   alternates: {
     canonical: "https://bloedbandenbedrijfsvoering.nl/nieuwsbrief",
   },
   openGraph: {
-    title: "De Donderdag Drie — nieuwsbrief van Bloedband & Bedrijfsvoering",
+    title: "De Donderdag Drie | nieuwsbrief van Bloedband & Bedrijfsvoering",
     description:
       "Elke donderdag één dilemma, één inzicht en één vraag die je helpt scherper te kijken naar ondernemen in een familiebedrijf. Gratis, rechtstreeks van Nick Waterman.",
     type: "website",
@@ -51,7 +51,7 @@ export default function NieuwsbriefPage() {
         <div className="max-w-2xl mx-auto px-6 pb-24">
           {/* Hero */}
           <div className="text-center">
-            <h1 className="font-display text-bb-plum-900 text-4xl sm:text-5xl font-bold leading-tight">
+            <h1 className="font-display text-bb-plum-900 text-4xl sm:text-5xl font-semibold leading-tight">
               De Donderdag Drie
             </h1>
             <p className="font-body text-bb-plum-800 text-lg leading-relaxed mt-6 max-w-lg mx-auto">
@@ -77,7 +77,7 @@ export default function NieuwsbriefPage() {
                   {i + 1}
                 </span>
                 <div>
-                  <h2 className="font-display text-bb-plum-900 text-xl font-bold mb-1">
+                  <h2 className="font-display text-bb-plum-900 text-xl font-semibold mb-1">
                     {item.label}
                   </h2>
                   <p className="font-body text-bb-plum-800 text-sm leading-relaxed">
@@ -99,7 +99,7 @@ export default function NieuwsbriefPage() {
               />
             </div>
             <div className="text-left">
-              <p className="font-display text-bb-plum-900 font-bold">Nick Waterman</p>
+              <p className="font-display text-bb-plum-900 font-semibold">Nick Waterman</p>
               <p className="font-body text-bb-plum-700 text-sm">
                 Host van Bloedband &amp; Bedrijfsvoering
               </p>

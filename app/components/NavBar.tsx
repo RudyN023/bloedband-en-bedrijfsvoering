@@ -48,24 +48,24 @@ export function NavBar() {
             <Link
               key={item}
               href={`/#${item.toLowerCase().replace(/ /g, "-")}`}
-              className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors"
+              className="font-body text-white/70 hover:text-white text-sm transition-colors"
             >
               {item}
             </Link>
           ))}
           <Link
             href={contactHref}
-            className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors"
+            className="font-body text-white/70 hover:text-white text-sm transition-colors"
           >
             Contact
           </Link>
         </div>
 
         <div className="flex items-center gap-3">
-          {/* Nieuwsbrief CTA */}
+          {/* Nieuwsbrief: rustige tweede actie */}
           <Link
             href={newsletterHref}
-            className="flex items-center gap-2 bg-bb-teal-700 hover:bg-bb-teal-800 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors font-body"
+            className="flex items-center gap-2 border border-white/25 hover:border-white/60 text-white text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-lg transition-colors font-body"
           >
             <MailIcon />
             <span className="hidden sm:inline">Nieuwsbrief</span>
@@ -75,13 +75,13 @@ export function NavBar() {
           <Link
             href="https://open.spotify.com/show/7lPmQPXoACeysRV3zIuYn1?si=7cc4de525dd9482a"
             target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-bb-salmon hover:bg-bb-salmon-light text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors"
+            className="flex items-center gap-2 bg-bb-salmon hover:bg-bb-salmon-light text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
           >
             <SpotifyIcon />
             <span className="hidden sm:inline font-body">Luister nu</span>
           </Link>
 
-          {/* Hamburger — mobile only */}
+          {/* Hamburger, alleen mobiel */}
           <button
             onClick={() => setOpen(!open)}
             className="md:hidden p-2 text-white/70 hover:text-white transition-colors"
@@ -108,7 +108,7 @@ export function NavBar() {
               key={item}
               href={`/#${item.toLowerCase().replace(/ /g, "-")}`}
               onClick={() => setOpen(false)}
-              className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors py-3 border-b border-white/10"
+              className="font-body text-white/70 hover:text-white text-sm transition-colors py-3 border-b border-white/10"
             >
               {item}
             </Link>
@@ -116,7 +116,7 @@ export function NavBar() {
           <Link
             href={contactHref}
             onClick={() => setOpen(false)}
-            className="font-body text-white/70 hover:text-white text-sm tracking-wider uppercase transition-colors py-3 border-b border-white/10"
+            className="font-body text-white/70 hover:text-white text-sm transition-colors py-3 border-b border-white/10"
           >
             Contact
           </Link>

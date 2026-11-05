@@ -16,8 +16,8 @@ export async function POST(request: Request) {
     from: "Bloedband & Bedrijfsvoering <contact@bloedbandenbedrijfsvoering.nl>",
     to: "nick@quatrevingtquatre.nl",
     replyTo: email,
-    subject: `Bericht van ${naam}${organisatie ? ` — ${organisatie}` : ""}`,
-    text: `Naam: ${naam}\nOrganisatie: ${organisatie || "—"}\nE-mail: ${email}\n\n${bericht}`,
+    subject: `Bericht van ${naam}${organisatie ? ` (${organisatie})` : ""}`,
+    text: `Naam: ${naam}\nOrganisatie: ${organisatie || "-"}\nE-mail: ${email}\n\n${bericht}`,
   });
 
   if (error) {

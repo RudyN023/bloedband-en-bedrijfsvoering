@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!gast) return {};
 
   const url = `https://bloedbandenbedrijfsvoering.nl/${gast.slug}`;
-  const title = `${gast.naam} (${gast.bedrijf}) — Bloedband & Bedrijfsvoering`;
+  const title = `${gast.naam} (${gast.bedrijf}) | Bloedband & Bedrijfsvoering`;
 
   return {
     title,
@@ -65,7 +65,7 @@ export default async function GastPage({ params }: Props) {
         <section className="pb-20">
           <div className="max-w-2xl mx-auto px-6">
             <p className="font-body text-bb-salmon-light text-sm font-semibold">{gast.welkom}</p>
-            <h1 className="font-display text-white font-bold leading-tight mt-3">
+            <h1 className="font-display text-white font-semibold leading-tight mt-3">
               {gast.titel ?? (
                 <>
                   <span className="block text-4xl sm:text-5xl">{gast.naam}</span>
@@ -98,7 +98,7 @@ export default async function GastPage({ params }: Props) {
                   href={gast.links.spotify ?? platformLinks.spotify}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-1.5 bg-white hover:bg-bb-purple-100 text-bb-plum-900 font-semibold px-2 py-3.5 rounded-full transition-colors text-sm whitespace-nowrap font-body"
+                  className="flex items-center justify-center gap-1.5 bg-white hover:bg-bb-purple-100 text-bb-plum-900 font-semibold px-2 py-3.5 rounded-lg transition-colors text-sm whitespace-nowrap font-body"
                 >
                   <span className="text-[#1DB954]"><SpotifyIcon /></span>
                   Spotify
@@ -109,7 +109,7 @@ export default async function GastPage({ params }: Props) {
                   href={gast.links.apple ?? platformLinks.apple}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-1.5 bg-white hover:bg-bb-purple-100 text-bb-plum-900 font-semibold px-2 py-3.5 rounded-full transition-colors text-sm whitespace-nowrap font-body"
+                  className="flex items-center justify-center gap-1.5 bg-white hover:bg-bb-purple-100 text-bb-plum-900 font-semibold px-2 py-3.5 rounded-lg transition-colors text-sm whitespace-nowrap font-body"
                 >
                   <span className="text-[#9933CC]"><AppleIcon /></span>
                   Apple Podcasts
@@ -125,7 +125,7 @@ export default async function GastPage({ params }: Props) {
         {/* Over de podcast */}
         <section className="bg-bb-purple-100 pt-20 pb-14" style={{ clipPath: "polygon(0 2.5rem, 100% 0, 100% 100%, 0 100%)" }}>
           <div className="max-w-2xl mx-auto px-6">
-            <h2 className="font-display text-bb-plum-900 text-3xl font-bold">Over Bloedband &amp; Bedrijfsvoering</h2>
+            <h2 className="font-display text-bb-plum-900 text-3xl font-semibold">Over Bloedband &amp; Bedrijfsvoering</h2>
             <p className="font-body text-bb-plum-800 leading-relaxed mt-4">
               Familiebedrijven zijn de ruggengraat van de Nederlandse economie en goed voor één op
               de drie banen. In deze podcast spreekt Nick Waterman met ondernemers en opvolgers uit
@@ -162,7 +162,7 @@ export default async function GastPage({ params }: Props) {
         <section className="bg-bb-salmon-light pt-14 pb-20" style={{ clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 2.5rem), 0 100%)" }}>
           <div className="max-w-2xl mx-auto px-6 text-center">
             <p className="font-body text-bb-plum-800 text-sm font-semibold">Mis de volgende aflevering niet</p>
-            <h2 className="font-display text-bb-plum-900 text-3xl font-bold mt-2">De Donderdag Drie</h2>
+            <h2 className="font-display text-bb-plum-900 text-3xl font-semibold mt-2">De Donderdag Drie</h2>
             <p className="font-body text-bb-plum-800 leading-relaxed mt-3 mb-6">
               Elke donderdag één dilemma, één inzicht en één vraag over ondernemen in een
               familiebedrijf. Gratis in je inbox.
@@ -174,14 +174,14 @@ export default async function GastPage({ params }: Props) {
         {/* Meer afleveringen */}
         <section className="pt-12 pb-16">
           <div className="max-w-2xl mx-auto px-6">
-            <h2 className="font-display text-white text-3xl font-bold">Best beluisterde afleveringen</h2>
+            <h2 className="font-display text-white text-3xl font-semibold">Best beluisterde afleveringen</h2>
             <p className="font-body text-white/70 text-sm mt-2">Tik op play om te luisteren op Spotify.</p>
             <div className="flex flex-col divide-y divide-white/10 mt-4">
               {topEpisodes.map((ep) => (
                 <div key={ep.rank} className="flex items-center gap-4 py-5">
                   <div className="flex-1">
-                    <div className="font-body text-bb-salmon-light text-xs font-semibold tracking-wider uppercase mb-1">{ep.company}</div>
-                    <p className="font-display text-white text-lg font-bold leading-snug">&ldquo;{ep.title}&rdquo;</p>
+                    <div className="font-body text-bb-salmon-light text-sm font-medium mb-1">{ep.company}</div>
+                    <p className="font-display text-white text-lg font-semibold leading-snug">&ldquo;{ep.title}&rdquo;</p>
                     <p className="font-body text-white/70 text-sm mt-1">
                       {ep.guest}
                       <span aria-hidden="true"> · </span>

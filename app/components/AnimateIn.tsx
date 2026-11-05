@@ -15,6 +15,11 @@ export function AnimateIn({ children, delay = 0, className = "" }: AnimateInProp
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    // Bij "minder beweging" staat alles direct op zijn plek
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setVisible(true);
+      return;
+    }
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -34,8 +39,8 @@ export function AnimateIn({ children, delay = 0, className = "" }: AnimateInProp
       className={className}
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0px)" : "translateY(28px)",
-        transition: `opacity 0.65s ease ${delay}ms, transform 0.65s ease ${delay}ms`,
+        transform: visible ? "translateY(0px)" : "translateY(12px)",
+        transition: `opacity 0.4s cubic-bezier(0.2, 0, 0, 1) ${delay}ms, transform 0.4s cubic-bezier(0.2, 0, 0, 1) ${delay}ms`,
       }}
     >
       {children}
